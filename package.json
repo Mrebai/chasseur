@@ -13,6 +13,7 @@
     "apollo-link-context": "^1.0.7",
     "apollo-link-http": "^1.5.3",
     "axios": "^0.18.0",
+    "babel-compiler": "^1.0.8",
     "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
     "cloudinary": "^1.11.0",
