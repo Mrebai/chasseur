@@ -1,0 +1,787 @@
+body{
+    overflow-x: hidden;
+}
+
+/***************************** $$Navbar ***********************/
+.navBarContainer{
+    background-color: transparent;
+    position: absolute;
+    z-index: 99999;
+    min-height: 100px;
+    width: 100%;
+}
+
+.logo{
+    height: 50px;
+    width: auto;
+}
+
+.collapedNav{
+    float: right;
+    color: white;
+}
+.collapsedNav.show{
+   display: inline-block;
+    position: relative;
+    float: right;
+    right: 0;
+    margin-right: auto;
+    background-color: rgba(0,0,0,.8);
+    padding: auto;
+}
+
+ .collapsedNav.collapsing{
+    display: inline-block;
+    position: relative;
+    float: right;
+    right: 0;
+    margin-right: auto;
+    background-color: rgba(0,0,0,.8);
+    padding: auto;
+}
+
+.collapsedNav.show ul li a{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.collapsedNav.collapsing ul li a{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.navLinkElement a {
+    opacity: .8;
+    font-size: .8rem;
+    margin: auto 5px;
+}
+.navLinkElement a:hover{
+    opacity: 1;
+    font-size: .8rem;
+    margin: auto 5px;
+}
+/***************************** $$Header ***********************/
+
+
+.navToggler{
+
+    display: inline;
+    position: relative;
+    float: right;
+    right: 0;
+    margin-right: 0;
+}
+
+.headerFirstHalf{
+    padding: 0;
+    padding-top: 100px;
+    margin: 0;
+    background-color: #1c33b0;
+}
+
+.headerFirstHalf div{
+    margin-right: 0;
+    padding-right: 0;
+}
+.headTitle{
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.headText{
+    color: white;
+    font-size: 1rem;
+    margin: auto 2rem;
+    text-align: center;
+
+}
+
+.sliderContainer{
+
+    background-color: #ff4081;
+    height: 80px;
+    width: 300px;
+    margin-top: 5rem;
+    float: right;
+}
+
+.headNextPrev{
+    width: 150px;
+    height: 80px;
+    overflow: hidden;
+}
+
+
+
+
+.headNextPrev p{
+   color: white;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+.headNextPrev button {
+      margin: 4px;
+      float: right;
+      display: block;
+      color: white;
+      background-color: transparent;
+      padding-bottom: 0;
+      font-size: 1.5rem;
+  }
+
+.fa-arrow-left  {
+    vertical-align: bottom;
+}
+
+.fa-arrow-right  {
+    vertical-align: bottom;
+}
+
+.minImg{
+    width: 150px;
+    height: auto;
+    display: block;
+
+}
+
+.minImgContainer{
+    width: 150px;
+    height: 80px;
+    overflow: hidden;
+}
+.minHeadImg{
+    width: 150px;
+    height: auto;
+}
+.coverBtn{
+
+    position: absolute;
+    width: 150px;
+    height: 80px;
+    z-index: 99999;
+    background-color: rgba(0,9,59,.8);
+    border-radius: 0;
+    border: 1px solid rgba(0,9,59,1);
+    color: white;
+    font-weight: bold;
+}
+
+.coverBtn:hover{
+
+    position: absolute;
+    width: 150px;
+    height: 80px;
+    z-index: 99999;
+    background-color: rgba(0,9,59,.9);
+    border-radius: 0;
+    border: 1px solid rgba(0,9,59,1);
+    color: white;
+    font-weight: bold;
+}
+.mainImgContainer{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.minImg{
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    height: 80px;
+}
+.headImg{
+    object-fit: cover;
+    height: 500px;
+    width: auto;
+
+}
+.headMainSlider{
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    width: 100%;
+}
+.mainHeadFilter{
+  position: absolute;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0,9,59,.6);
+}
+
+/***************************** $$HeadGallery ***********************/
+.headGalleryContainer{
+    background-image: url("/bg/bg1.jpg");
+    background-size: cover;
+    padding-top: 3rem;
+    position: relative;
+    display: block;
+    font-size: 5rem;
+    background-attachment: fixed;
+}
+
+.SectionTitle{
+    color: white;
+    text-align: center;
+    position: static;
+
+
+
+}
+.titleUnderlined{
+    width: 60px;
+    height: 1px;
+    border: 2px solid #22eab8;
+    margin: auto;
+    border-radius: 8px;
+}
+.optionsBtnGallery{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.optionsBtnGallery button{
+    border-radius: 0;
+  background-color: transparent;
+    color: #C4C4C4;
+}
+
+.optionsBtnGallery button:focus{
+    border-radius: 0;
+
+}
+
+.SliderContainer{
+    position: relative;
+}
+
+.galleryBigCard{
+    height: 500px;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #C4C4C4;
+    margin-bottom: 20px;
+}
+
+.gallerySmallCard{
+    height: 240px;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #C4C4C4;
+    margin-bottom: 20px;
+}
+ .headCardBody{
+     margin-bottom: auto;
+     bottom: 0;
+     display: block;
+     position: absolute;
+     background-color: rgba(0,0,0,.8);
+     color: #C4C4C4;
+     width: 100%;
+     font-size: .6rem;
+     padding:  0 8px;
+
+ }
+
+.gallerySmallCard{
+    height: 240px;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #C4C4C4;
+    margin-bottom: 20px;
+
+}
+
+.bigger{
+    animation-name: aBiggerBG;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.smaller{
+    animation-name: aSmallBG;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes aBiggerBG {
+    from {transform:scale(1,1)}
+    to {transform:scale(1.05,1.05)}
+}
+
+@keyframes aSmallBG {
+    from {transform:scale(1.05,1.05)}
+    to {transform:scale(1,1)}
+}
+
+.expandHeadImg{
+    margin: auto 5px ;
+    font-size: 1rem;
+    opacity: .8;
+    background-color:transparent;
+    color: #C4C4C4;
+
+}
+
+.expandHeadImg:hover{
+
+    opacity: 1;
+}
+
+
+
+.biggerExpand{
+    animation-name: aBiggerExpand;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.smallerExpand{
+    animation-name: aSmallerExpand;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes aBiggerExpand {
+    from {font-size: 1rem ; opacity: .8}
+    to {font-size: 1.5rem; opacity: 1}
+}
+
+@keyframes aSmallerExpand {
+    from {font-size: 1.5rem; opacity: 1}
+    to  {font-size: 1rem ; opacity: .8}
+}
+
+.gallerySlideTitle{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: small;
+    color: white;
+}
+
+.gallerySlideViewMoreBtn{
+    opacity: .8;
+    display: block;
+    margin: auto;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    color: #EEEEEE;
+}
+.gallerySlideViewMoreBtn:hover{
+    opacity: 1;
+    display: block;
+    margin: auto;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    color: #FFFFFF;
+}
+.gallerySlideViewMoreBtn:focus{
+    box-shadow: none;
+}
+
+
+/***************************** $$HeadOffers ***********************/
+.headOfferContainer{
+    padding-top: 3rem;
+    position: relative;
+    display: block;
+    font-size: 5rem;
+    background-color: #ffe1eb  ;
+}
+
+.offersTitle{
+    color: #222222;
+}
+
+.mainOffer{
+    display: table;
+    border-radius: 4px;
+}
+
+.secondaryOffer{
+    display: table;
+}
+
+.mainOffer li{
+    min-height: 80px;
+    font-size: .9rem;
+    display: block;
+    margin: auto;
+    vertical-align: middle;
+    text-align: center;
+    color: #555555;
+}
+
+.secondaryOffer li{
+    min-height: 70px;
+    font-size: 1rem;
+   display: block;
+    margin: auto;
+    vertical-align: middle;
+    text-align: center;
+    color: #555555;
+}
+
+.mainOffer li:first-child{
+    background-color: rgba(0,178,211,.4);
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+
+.secondaryOffer:first-child li:first-child{
+    background-color: rgba(80,192,95,.4);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.secondaryOffer:first-child {
+    border-radius: 4px 4px 0 0 ;
+}
+
+.myOffersContainer ul:nth-child(3) li:first-child{
+    background-color: rgba(254,69,101,.4);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.ReserveNowBtn{
+    display: block;
+    margin: auto;
+    border-radius: 0;
+    margin-top: 1rem;
+    padding: 4px 10px;
+    background-color: #ff4081;
+    color: #FFFFFF;
+    opacity: .7;
+}
+
+
+.ReserveNowBtn:hover{
+    display: block;
+    margin: auto;
+    border-radius: 0;
+    margin-top: 1rem;
+    padding: 4px 10px;
+    background-color: #ff4081;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.ReserveNowBtn:focus{
+    display: block;
+    margin: auto;
+    border-radius: 0;
+    margin-top: 1rem;
+    padding: 4px 10px;
+    background-color: #ff4081;
+    color: #FFFFFF;
+    opacity: 1;
+    box-shadow: none;
+}
+
+
+/***************************** $$HeadWhyUs ***********************/
+
+.whyUsContainer{
+    padding-top: 3rem;
+    background-image: url("/bg/bg2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.whyUsBtn{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    background-color: rgba(256,256,256,.1);
+    color:rgba(256,256,256,.3);
+
+
+}
+
+.whyUsBtn:focus{
+    box-shadow: none;
+
+
+}
+
+.whyUsBtn:after {
+    content: "";
+    display: block;
+
+}
+
+.whyUsMsg{
+    color: #c4c4c4;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/***************************** $$HeadWhyUs ***********************/
+.teamContainer{
+    background-image: url("/bg/bg3.jpg");
+    background-size: cover;
+    padding-top: 3rem;
+}
+.teamCardContainer{
+    width: 100%;
+    min-height: 300px;
+
+}
+.teamOverLine{
+    width: 100%;
+    height: 5px;
+    border-radius:   5px 5px 0 0;
+
+}
+.speech-bubble {
+    position: relative;
+    background-color: rgba(256,256,256,.05);
+    font-size: 1rem;
+    text-align: center;
+    color: #c4c4c4;
+    width: 100%;
+    min-height: 200px;
+    padding: auto;
+    display: table;
+}
+
+.speech-bubble p {
+    margin-top: 1rem;
+}
+
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 0.375em solid transparent;
+    border-top-color: rgba(256,256,256,.2);
+    border-bottom: 0;
+    margin-left: -0.375em;
+    margin-bottom: -0.375em;
+}
+
+.teamPerson{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+
+    margin-top: 1rem;
+    background-size: cover;
+    border-radius: 100%;
+}
+
+.brandContainer img{
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: .2;
+}
+
+.brandContainer img:hover{
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 1;
+}
+
+.teamName{
+    text-align: center;
+    color: #d0d0d0
+}
+.teamDesc{
+    font-weight: lighter;
+    color: #a1a1a1;
+    text-align: center;
+}
+
+
+/***************************** $$HeadContact ***********************/
+.homeContactContainer{
+    padding-top: 3rem;
+}
+
+.homeContactInfo input{
+    border: 0;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+.homeContactInfo input:focus{
+    border: 0;
+    border-bottom: 3px solid #FF4081;
+    box-shadow: none;
+}
+
+.homeMessageContent input{
+    border: 0;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+.homeMessageContent input:focus{
+    border: 0;
+    border-bottom: 3px solid #FF4081;
+    box-shadow: none;
+}
+
+.homeMessageContent textarea{
+    border: 1px solid #c4c4c4;
+
+}
+
+.homeMessageContent textarea:focus{
+    border:  1px solid #FF4081;
+    box-shadow: none;
+}
+
+/***************************** $$Footer ***********************/
+.footerContainer{
+    background-image: url("/bg/bg4.jpg");
+    background-size: cover;
+    padding-top: 3rem;
+}
+.footerUnderlined{
+    width: 40px;
+    height: 1px;
+    border: 2px solid #22eab8;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.footerTitle{
+    color: white;
+
+}
+
+.footerAbout{
+    margin-right: 1rem   ;
+    font-size: .8rem;
+    color: #C4C4C4;
+}
+
+.footerSocials button{
+    background-color: rgba(256,256,256,.05);
+    color: rgba(256,256,256,.2);
+    border-radius: 0;
+    font-size: 1.4rem;
+    min-height: 50px;
+    min-width: 50px;
+}
+
+.footerSocials button:first-child:hover{
+    background-color:#4267B2;
+    color: white;
+    border-radius: 0;
+    font-size: 1.4rem;
+}
+
+
+.footerSocials button:nth-child(2):hover{
+    background-color:#D62976;
+    color: white;
+    border-radius: 0;
+    font-size: 1.4rem;
+}
+
+.footerSocials button:nth-child(3):hover{
+    background-color:#ff0000;
+    color: white;
+    border-radius: 0;
+    font-size: 1.4rem;
+}
+
+.rights{
+    color: #555555;
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: lighter;
+    font-size: .6rem;
+}
+
+.footerCardContainer{
+
+    height: 80px;
+    width: 100%;
+    margin-bottom: 4px;
+    background-color: rgba(256,256,256,.05);
+
+}
+
+.footerImgContainer{
+    display: block;
+    min-width: 80px;
+
+
+    background-size: cover;
+}
+.footerCardText p{
+    color: #d1d1d1;
+    font-size: .8rem;
+    margin-left: .5rem;
+}
+
+.footerCardText p:nth-child(2){
+    color: #a4a4a4;
+    font-size: .8rem;
+    font-weight: lighter;
+}
+
+.footerContactMe{
+    background-color: rgba(256,256,256,.05);
+    margin-bottom: 5px;
+}
+
+.contactMeIcon{
+    color: rgba(256,256,256,.2);
+    font-size: 2.5rem;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.footerContactInfo p:first-child{
+    color: rgba(256,256,256,.2);
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 2rem;
+}
+
+.footerPhoneVal{
+    color: #c4c4c4;
+    font-size: 1.3rem;
+    margin-left: 2rem;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.footerEmailAddressVal{
+    color:  rgba(254,69,101,.7);
+    font-size: .9rem;
+    margin-left: 2rem;
+    margin-bottom: 3px;
+
+}
+
+.footerAddressVal{
+    color: rgba(256,256,256,.2);
+    font-size: .9rem;
+    margin-left: 2rem;
+    margin-bottom: 3px;
+}
+
+.mailIcon{
+    margin-left: 13px;
+}
