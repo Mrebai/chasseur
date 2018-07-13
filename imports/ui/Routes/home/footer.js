@@ -13,10 +13,10 @@ export default Footer = () => {
         vertical: true,
         verticalSwiping: true,
         beforeChange: function(currentSlide, nextSlide) {
-            console.log("before change", currentSlide, nextSlide);
+
         },
         afterChange: function(currentSlide) {
-            console.log("after change", currentSlide);
+
         }
     };
 
@@ -30,9 +30,9 @@ export default Footer = () => {
 
                         <p className="footerAbout text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores eligendi explicabo illum nihil nostrum omnis perspiciatis repudiandae suscipit vitae.</p>
                         <div className="d-flex justify-content-around footerSocials">
-                            <button className="btn"><i class="fab fa-facebook-f"></i></button>
-                            <button className="btn"><i class="fab fa-instagram"></i></button>
-                            <button className="btn"><i class="fab fa-youtube"></i></button>
+                            <button className="btn"><i className="fab fa-facebook-f"></i></button>
+                            <button className="btn"><i className="fab fa-instagram"></i></button>
+                            <button className="btn"><i className="fab fa-youtube"></i></button>
                         </div>
 
                         <p className='rights' > Ala Edine Mrebai 2018</p>
