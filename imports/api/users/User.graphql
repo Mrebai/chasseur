@@ -2,11 +2,11 @@ type User {
   _id: String
   email: String
   userName: String
-  cart:[cart]
+
 
 }
 
-extend type Query {
+type Query {
   user: User
 
 }

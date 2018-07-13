@@ -29,21 +29,16 @@ class App extends Component {
         this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
 
-    user = ( ) => (
-        <Query query={userQuery}>
-            {({ loading, error, data }) => {
-                if (loading) return "Loading...";
-                if (error) return `Error! ${error.message}`;
+    user = ( ) =>
 
-                return (
-                    <ThemeContext.Provider value={{width:this.state.width,user:data.user._id,userName:data.user.userName,cartLength:(data.user._id)?data.user.cart.length : 0 }}>
+
+                    <ThemeContext.Provider value={{width:this.state.width,}}>
 
                         <Routes/>
-                    </ThemeContext.Provider>
-                );
-            }}
-        </Query>
-    );
+                    </ThemeContext.Provider>;
+
+
+
     render(){
     return (
         <div>

@@ -112,7 +112,7 @@ export default Footer = () => {
                         <div className="footerContactMe d-flex justify-content-start">
                             <i className="contactMeIcon fas fa-map-marker-alt"></i>
                             <div className="d-flex flex-column footerContactInfo">
-                                <p>Adress</p>
+                                <p>Address</p>
                                 <p className='footerAddressVal'>Oued Zarga 9013 , Beja , Tunisie</p>
                             </div>
                         </div>
