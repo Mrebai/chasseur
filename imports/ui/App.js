@@ -32,7 +32,7 @@ class App extends Component {
     user = ( ) =>
 
 
-                    <ThemeContext.Provider value={{width:this.state.width,}}>
+                    <ThemeContext.Provider value={{width:this.state.width }}>
 
                         <Routes/>
                     </ThemeContext.Provider>;
