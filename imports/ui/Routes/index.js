@@ -1,6 +1,6 @@
 import React from 'react'
 import {BrowserRouter,Route,Switch,Link} from "react-router-dom"
-import Home from './meteor build --server-only ../new_package && mv ../new_package/*.tar.gz package.tar.gzhome'
+import Home from './home'
 import {clothesQuery} from '../api/queries'
 
 import { Query } from "react-apollo";
