@@ -15,7 +15,7 @@ import likeResolvers from '../../api/likes/resolvers';
 import catchema from '../../api/categories/category.graphql';
 import catResolvers from '../../api/categories/resolvers';
 //hihihiiivvsqfcfsssdsssfffhhdssszsssssssssssssss
-// hiiiicdxcsdcscvcxndssjysgsgfssfssssdsssssss sfsssssdsssdssdsssssssss
+// hiiiicdxcsdcscvcxndssjysghhsgfssfssssdsssssss sfsssssdsssdssdsssssssss
 
 
 const typeDefs = [UserSchema,clothesSchema,reviewSchema,cartSchema,likeSchema,catchema];

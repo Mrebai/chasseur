@@ -48,5 +48,7 @@
     "time-ago": "^0.2.1",
     "tween": "^0.9.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-plugin-inline-import": "^3.0.0"
+  }
 }
