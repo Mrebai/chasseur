@@ -76,35 +76,35 @@ class HeadGallery extends Component {
                             <h4 className={'gallerySlideTitle'}> NEW VIDEOS</h4>
                             <div className="row">
 
-                                {/*<div className="col-md-6">*/}
-                                    {/*<YouTube*/}
-                                        {/*videoId="2g811Eo7K8U"*/}
-                                        {/*opts={opts}*/}
-                                        {/*onReady={this._onReady}*/}
-                                    {/*/>*/}
+                                <div className="col-md-6">
+                                    <YouTube
+                                        videoId="2g811Eo7K8U"
+                                        opts={opts}
+                                        onReady={this._onReady}
+                                    />
 
-                                {/*</div>*/}
-                                {/*<div className="col-md-6">*/}
-                                    {/*<YouTube*/}
-                                        {/*videoId="2g811Eo7K8U"*/}
-                                        {/*opts={opts}*/}
-                                        {/*onReady={this._onReady}*/}
-                                    {/*/>*/}
-                                {/*</div>*/}
-                                {/*<div className="col-md-6">*/}
-                                    {/*<YouTube*/}
-                                        {/*videoId="2g811Eo7K8U"*/}
-                                        {/*opts={opts}*/}
-                                        {/*onReady={this._onReady}*/}
-                                    {/*/>*/}
-                                {/*</div>*/}
-                                {/*<div className="col-md-6">*/}
-                                {/*<YouTube*/}
-                                    {/*videoId="2g811Eo7K8U"*/}
-                                    {/*opts={opts}*/}
-                                    {/*onReady={this._onReady}*/}
-                                {/*/>*/}
-                            {/*</div>*/}
+                                </div>
+                                <div className="col-md-6">
+                                    <YouTube
+                                        videoId="2g811Eo7K8U"
+                                        opts={opts}
+                                        onReady={this._onReady}
+                                    />
+                                </div>
+                                <div className="col-md-6">
+                                    <YouTube
+                                        videoId="2g811Eo7K8U"
+                                        opts={opts}
+                                        onReady={this._onReady}
+                                    />
+                                </div>
+                                <div className="col-md-6">
+                                <YouTube
+                                    videoId="2g811Eo7K8U"
+                                    opts={opts}
+                                    onReady={this._onReady}
+                                />
+                            </div>
 
 
                             </div>
@@ -117,11 +117,11 @@ class HeadGallery extends Component {
                             <div className="row">
 
                                 <div className="col-md-12">
-                                    {/*<YouTube*/}
-                                        {/*videoId="2g811Eo7K8U"*/}
-                                        {/*opts={opts2}*/}
-                                        {/*onReady={this._onReady}*/}
-                                    {/*/>*/}
+                                    <YouTube
+                                        videoId="2g811Eo7K8U"
+                                        opts={opts2}
+                                        onReady={this._onReady}
+                                    />
 
                                 </div>
 

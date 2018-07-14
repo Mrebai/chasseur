@@ -1,3 +1,4 @@
+import Cart from '../cart/cart'
 
 export default {
 
@@ -13,7 +14,7 @@ export default {
 
         email: (user) =>(user._id)?  user.emails[0].address: null ,
         userName: (user) =>(user._id)?   user.username : null,
-
+        cart:(user) =>  results = (user._id)? Cart.find({userId:user._id}).fetch() : null
     }
 
 }
