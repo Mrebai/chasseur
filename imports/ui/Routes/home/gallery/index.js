@@ -12,6 +12,11 @@ class HeadGallery extends Component {
         }
     }
 
+    _onReady = (event) => {
+        // access to player in all event handlers via event.target
+        event.target.pauseVideo();
+    };
+
     render() {
         const settings = {
             dots: false,
@@ -35,10 +40,9 @@ class HeadGallery extends Component {
         const opts2 = {
             height: '500px',
             width: '100%',
-            playerVars: { // https://developers.google.com/youtube/player_parameters
-                autoplay: 0
-            }
+
         };
+
         return (
             <div className="headGalleryContainer">
                 <h3 className=" SectionTitle">GALLERY</h3>
@@ -76,37 +80,33 @@ class HeadGallery extends Component {
                             <h4 className={'gallerySlideTitle'}> NEW VIDEOS</h4>
                             <div className="row">
 
-                                <div className="col-md-6">
-                                    <YouTube
-                                        videoId="2g811Eo7K8U"
-                                        opts={opts}
-                                        onReady={this._onReady}
-                                    />
-
-                                </div>
-                                <div className="col-md-6">
-                                    <YouTube
-                                        videoId="2g811Eo7K8U"
-                                        opts={opts}
-                                        onReady={this._onReady}
-                                    />
-                                </div>
-                                <div className="col-md-6">
-                                    <YouTube
-                                        videoId="2g811Eo7K8U"
-                                        opts={opts}
-                                        onReady={this._onReady}
-                                    />
-                                </div>
-                                <div className="col-md-6">
-                                <YouTube
-                                    videoId="2g811Eo7K8U"
-                                    opts={opts}
-                                    onReady={this._onReady}
-                                />
-                            </div>
 
 
+                                <div className="col-md-6 mb-2">
+                                    <div className="embed-responsive embed-responsive-21by9">
+                                        <iframe  className="embed-responsive-item" src="https://www.youtube.com/embed/iyLkHIftPis"></iframe>
+                                    </div>
+
+                                </div>
+                                <div className="col-md-6 mb-2">
+                                    <div className="embed-responsive embed-responsive-21by9">
+                                        <iframe  className="embed-responsive-item" src="https://www.youtube.com/embed/iyLkHIftPis"></iframe>
+                                    </div>
+
+                                </div>
+                                <div className="col-md-6 mb-2">
+                                    <div className="embed-responsive embed-responsive-21by9">
+                                        <iframe  className="embed-responsive-item" src="https://www.youtube.com/embed/iyLkHIftPis"></iframe>
+                                    </div>
+
+                                </div>
+
+                                <div className="col-md-6 mb-2">
+                                    <div className="embed-responsive embed-responsive-21by9">
+                                        <iframe  className="embed-responsive-item" src="https://www.youtube.com/embed/iyLkHIftPis"></iframe>
+                                    </div>
+
+                                </div>
                             </div>
                             <button className="btn gallerySlideViewMoreBtn">VIEW MORE</button>
 
@@ -117,11 +117,11 @@ class HeadGallery extends Component {
                             <div className="row">
 
                                 <div className="col-md-12">
-                                    <YouTube
-                                        videoId="2g811Eo7K8U"
-                                        opts={opts2}
-                                        onReady={this._onReady}
-                                    />
+
+                                        <div className="embed-responsive embed-responsive-21by9">
+                                            <iframe  className="embed-responsive-item" src="https://www.youtube.com/embed/iyLkHIftPis"></iframe>
+                                        </div>
+
 
                                 </div>
 

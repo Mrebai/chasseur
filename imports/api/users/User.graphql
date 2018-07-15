@@ -1,7 +1,4 @@
-
-export default userSchema =`
-
- type User {
+type User {
   _id: String
   email: String
   userName: String
@@ -9,9 +6,7 @@ export default userSchema =`
 
 }
 
-type Query {
+extend type Query {
   user: User
 
 }
-`
-

@@ -71,8 +71,8 @@ class Head  extends Component {
                         <div className='sliderContainer d-flex flex-row'>
                             <div className='headNextPrev d-flex flex-row'>
                                 <p className='miniImg'>{this.state.currentSlide +1 + '/4'}  </p>
-                                <button  onClick={this.previous} className="btn px-1 m-0"> <i class="fas fa-arrow-left"></i></button>
-                                <button onClick={this.next} className="btn px-1 mr-0" > <i class="fas fa-arrow-right"></i></button>
+                                <button  onClick={this.previous} className="btn px-1 m-0"> <i className="fas fa-arrow-left"></i></button>
+                                <button onClick={this.next} className="btn px-1 mr-0" > <i className="fas fa-arrow-right"></i></button>
                             </div>
 
 
@@ -93,7 +93,7 @@ class Head  extends Component {
                                         <img className='minHeadImg' src="/header/miniImg2.jpg" alt=""/>
                                     </div>
                                     <div key={3} className=" minImg"  >
-                                        <button className="btn coverBtn"> <i style={{color:'red'}} class="far fa-dot-circle"></i>STREAMING</button>
+                                        <button className="btn coverBtn"> <i style={{color:'red'}} className="far fa-dot-circle"></i>STREAMING</button>
 
                                         <img className='minHeadImg' src="/header/miniImg3.jpg" alt=""/>
                                     </div>

@@ -41,22 +41,22 @@ class HomeWhyUs extends Component {
                     <div className="row mt-4">
 
                         <div className="col-md-2 col-4" >
-                            <button style={(this.state.slideIndex === 0)? {color:'#FF4081',boxShadow:'0 3px 5px #FF4081'} :{color:'#c4c4c4'} } onClick={() => this.slider.slickGoTo(0)}  className="btn whyUsBtn"><i class="fas fa-users"></i></button>
+                            <button style={(this.state.slideIndex === 0)? {color:'#FF4081',boxShadow:'0 3px 5px #FF4081'} :{color:'#c4c4c4'} } onClick={() => this.slider.slickGoTo(0)}  className="btn whyUsBtn"><i className="fas fa-users"></i></button>
                         </div>
                         <div className="col-md-2 col-4">
-                            <button style={(this.state.slideIndex === 1)? {color:'#FF4081',boxShadow:'0 3px 5px #FF4081'} :{color:'#c4c4c4'} }  onClick={() => this.slider.slickGoTo(1)} className="btn whyUsBtn"> <i class="fas fa-camera"></i></button>
+                            <button style={(this.state.slideIndex === 1)? {color:'#FF4081',boxShadow:'0 3px 5px #FF4081'} :{color:'#c4c4c4'} }  onClick={() => this.slider.slickGoTo(1)} className="btn whyUsBtn"> <i className="fas fa-camera"></i></button>
                         </div>
                         <div className="col-md-2 col-4">
-                            <button style={(this.state.slideIndex === 2)? {color:'#FF4081',boxShadow:'0 3px 5px #FF4081'} :{color:'#c4c4c4'} } onClick={() => this.slider.slickGoTo(2)} className="btn whyUsBtn"><i class="far fa-calendar-alt"></i> </button>
+                            <button style={(this.state.slideIndex === 2)? {color:'#FF4081',boxShadow:'0 3px 5px #FF4081'} :{color:'#c4c4c4'} } onClick={() => this.slider.slickGoTo(2)} className="btn whyUsBtn"><i className="far fa-calendar-alt"></i> </button>
                         </div>
                         <div className="col-md-2 col-4">
-                            <button style={(this.state.slideIndex === 3)? {color:'#FF4081',boxShadow:'0 3px 5px #FF4081'} :{color:'#c4c4c4'} } onClick={() => this.slider.slickGoTo(3)} className="btn whyUsBtn"> <i class="fas fa-video"></i> </button>
+                            <button style={(this.state.slideIndex === 3)? {color:'#FF4081',boxShadow:'0 3px 5px #FF4081'} :{color:'#c4c4c4'} } onClick={() => this.slider.slickGoTo(3)} className="btn whyUsBtn"> <i className="fas fa-video"></i> </button>
                         </div>
                         <div className="col-md-2 col-4">
-                            <button style={(this.state.slideIndex === 4)? {color:'#FF4081',boxShadow:'0 3px 5px #FF4081'} :{color:'#c4c4c4'} } onClick={() => this.slider.slickGoTo(4)} className="btn whyUsBtn"><i class="fas fa-car"></i></button>
+                            <button style={(this.state.slideIndex === 4)? {color:'#FF4081',boxShadow:'0 3px 5px #FF4081'} :{color:'#c4c4c4'} } onClick={() => this.slider.slickGoTo(4)} className="btn whyUsBtn"><i className="fas fa-car"></i></button>
                         </div>
                         <div className="col-md-2 col-4">
-                            <button style={(this.state.slideIndex === 5)? {color:'#FF4081',boxShadow:'0 3px 5px #FF4081'} :{color:'#c4c4c4'} } onClick={() => this.slider.slickGoTo(5)} className="btn whyUsBtn"> <i class="fas fa-hand-holding-usd"></i></button>
+                            <button style={(this.state.slideIndex === 5)? {color:'#FF4081',boxShadow:'0 3px 5px #FF4081'} :{color:'#c4c4c4'} } onClick={() => this.slider.slickGoTo(5)} className="btn whyUsBtn"> <i className="fas fa-hand-holding-usd"></i></button>
                         </div>
                     </div>
                 </div>

@@ -22,7 +22,7 @@ class HomeVideoCard extends Component {
                             <p>At 1/14/2018 (50)</p>
                         </div>
                         <button onClick={() => this.expandImage('fixed')} className={ (this.state.size === '')? "btn expandHeadImg ":(this.state.size === 'bigger')? 'btn expandHeadImg biggerExpand' :'btn expandHeadImg smallerExpand'}>
-                            <i class="fas fa-expand"></i>
+                            <i className="fas fa-expand"></i>
                         </button>
 
                     </div>

@@ -1,30 +1,5 @@
-export default cartSchema = `
+import {Mongo} from 'meteor/mongo'
 
-type cart{
-    _id:ID
-    userId: String
-    itemId: String
-    productId: String!
-    name: String!
-    img: String
-    color: String
-    number:Int
-    size:String
-    price:Float
-}
+const Cart = new Mongo.Collection('cart');
 
-type Mutation {
-    addCart(
-        itemId: String!
-        productId: String!
-        name: String!
-        img: String!
-        color: String
-        number:Int
-        size:String!
-        price:Float
-    ): cart
-
-    deleteCart(_id:String!): cart
-}
-`
+export default Cart
