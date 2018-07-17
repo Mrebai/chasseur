@@ -1,6 +1,6 @@
 import React from 'react'
 import Slider from 'react-slick'
-export default Footer = () => {
+export default Footer = ({lng}) => {
     const settings = {
         dots: false,
         arrows:false,
@@ -12,12 +12,7 @@ export default Footer = () => {
         speed:1000,
         vertical: true,
         verticalSwiping: true,
-        beforeChange: function(currentSlide, nextSlide) {
-            console.log("before change", currentSlide, nextSlide);
-        },
-        afterChange: function(currentSlide) {
-            console.log("after change", currentSlide);
-        }
+
     };
 
     return (
@@ -25,10 +20,10 @@ export default Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-4">
-                        <h6 className='footerTitle'> ABOUT US</h6>
+                        <h6 className='footerTitle'>{lng.aboutUs.toUpperCase()}</h6>
                         <div className='footerUnderlined'></div>
 
-                        <p className="footerAbout text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores eligendi explicabo illum nihil nostrum omnis perspiciatis repudiandae suscipit vitae.</p>
+                        <p className="footerAbout text-justify">{lng.aboutUsText}</p>
                         <div className="d-flex justify-content-around footerSocials">
                             <button className="btn"><i className="fab fa-facebook-f"></i></button>
                             <button className="btn"><i className="fab fa-instagram"></i></button>
@@ -38,7 +33,7 @@ export default Footer = () => {
                         <p className='rights' > Ala Edine Mrebai 2018</p>
                     </div>
                     <div className="col-md-4">
-                        <h6 className='footerTitle'> RECENT POSTS</h6>
+                        <h6 className='footerTitle'> {lng.recentPosts.toUpperCase()}</h6>
 
 
                         <div className='footerUnderlined'></div>
@@ -112,7 +107,7 @@ export default Footer = () => {
                         <div className="footerContactMe d-flex justify-content-start">
                             <i className="contactMeIcon fas fa-map-marker-alt"></i>
                             <div className="d-flex flex-column footerContactInfo">
-                                <p>Address</p>
+                                <p className='footerEMailAdd'>{lng.address}</p>
                                 <p className='footerAddressVal'>Oued Zarga 9013 , Beja , Tunisie</p>
                             </div>
                         </div>

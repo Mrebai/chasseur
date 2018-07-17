@@ -23,7 +23,7 @@ class HomeWhyUs extends Component {
             autoplay: true,
             autoplaySpeed: 5000,
             fade:true,
-            adaptiveHeight: true,
+
             afterChange: () =>
                 this.setState(state => ({ updateCount: state.updateCount + 1 })),
             beforeChange: (current, next) => this.setState({ slideIndex: next })
@@ -32,7 +32,7 @@ class HomeWhyUs extends Component {
 
         return (
             <div className="whyUsContainer">
-                <h3 className=" SectionTitle ">WHY US?</h3>
+                <h3 className=" SectionTitle ">{this.props.lng.whyUs.toUpperCase()}</h3>
                 <div className={'titleUnderlined'}></div>
                 {
                     console.log()
@@ -63,22 +63,22 @@ class HomeWhyUs extends Component {
 
                 <Slider ref={slider => (this.slider = slider)} {...settings}>
                     <div>
-                        <p className={'whyUsMsg lead'} > random text 1 </p>
+                        <p className={'whyUsMsg lead'} > {this.props.lng.whyTsText1}</p>
                     </div>
                     <div>
-                        <p  className={'whyUsMsg lead'} > random text 2 </p>
+                        <p  className={'whyUsMsg lead'} >  {this.props.lng.whyTsText2} </p>
                     </div>
                     <div>
-                        <p  className={'whyUsMsg lead'} > random text 3 </p>
+                        <p  className={'whyUsMsg lead'} >  {this.props.lng.whyTsText3} </p>
                     </div>
                     <div>
-                        <p  className={'whyUsMsg lead'} > random text 4 </p>
+                        <p  className={'whyUsMsg lead'} > {this.props.lng.whyTsText4} </p>
                     </div>
                     <div>
-                        <p  className={'whyUsMsg lead'} > random text 5 </p>
+                        <p  className={'whyUsMsg lead'} >  {this.props.lng.whyTsText5} </p>
                     </div>
                     <div>
-                        <p  className={'whyUsMsg lead'} > random text 6 </p>
+                        <p  className={'whyUsMsg lead'} >  {this.props.lng.whyTsText6} </p>
                     </div>
 
 

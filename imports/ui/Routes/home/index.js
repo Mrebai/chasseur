@@ -1,5 +1,6 @@
 import React from 'react'
-import {ThemeContext} from '../../context';
+import ThemeContext from '../../context/screenContext';
+import LanguageContext from '../../context/languageContext';
 import Head from './head'
 import MainNavBar from './headNavBar'
 import HeadGallery from './gallery'
@@ -16,17 +17,31 @@ export default Home = (props) => {
             {theme => {
                 console.log(theme);
               return  (
-                  <div>
-                      <MainNavBar/>
-                      <Head/>
-                      <HomeWhyUs width={theme.width}/>
-                      <HeadOffers/>
-                      <HeadGallery/>
-                      <HomeBrands/>
-                      <HeadTeam/>
-                      <HomeContact/>
-                      <Footer/>
-                  </div>
+                  <LanguageContext.Consumer>
+                      {
+                          lng=>{
+                              console.log(lng);
+                              return(
+
+                                  <div>
+                                      <MainNavBar lng={lng} />
+                                      <Head lng={lng} />
+                                      <HomeWhyUs lng={lng}  width={theme.width}/>
+                                      <HeadOffers lng={lng} />
+                                      <HeadGallery lng={lng} />
+                                      <HomeBrands lng={lng} />
+                                      <HeadTeam lng={lng} />
+                                      <HomeContact lng={lng} />
+                                      <Footer lng={lng} />
+                                  </div>
+
+                              )
+                          }
+                      }
+                  </LanguageContext.Consumer>
+
+
+
                     )
                 }
 

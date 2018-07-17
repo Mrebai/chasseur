@@ -1,0 +1,20 @@
+type message{
+    _id:ID
+    name: String
+    phone: Int
+    email: String
+    subject: String
+    message:String
+}
+
+extend type Mutation {
+    sendMsg(
+        name: String!
+        phone: Int!
+        email: String!
+        subject: String!
+        message:String!
+
+    ):message
+}
+

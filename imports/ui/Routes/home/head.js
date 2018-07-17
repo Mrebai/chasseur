@@ -66,8 +66,8 @@ class Head  extends Component {
             <div className="row headerContainer">
                 <div className="col-md-6 row headerFirstHalf" >
                     <div className="offset-md-4 col-md-8 " >
-                        <h1 className='lead display-4 headTitle'> CHASSEUR D'IMAGES</h1>
-                        <h6 className='lead display-4 headText mt-2'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut. </h6>
+                        <h1 className='lead display-4 headTitle'> {this.props.lng.title.toUpperCase()}</h1>
+                        <h6 className='lead display-4 headText mt-2'>{this.props.lng.underTitle.toUpperCase()} </h6>
                         <div className='sliderContainer d-flex flex-row'>
                             <div className='headNextPrev d-flex flex-row'>
                                 <p className='miniImg'>{this.state.currentSlide +1 + '/4'}  </p>
@@ -81,24 +81,24 @@ class Head  extends Component {
                                 <Slider asNavFor={this.state.nav2}   ref={a => (this.slider1 = a)} {...this.state.settings2}>
 
                                     <div key={1} className=" minImg"  >
-                                        <button className="btn coverBtn">RESERVE NOW</button>
+                                        <button className="btn coverBtn">{this.props.lng.reserveNow.toUpperCase()} </button>
 
                                         <img className='minHeadImg' src="/header/miniImg.jpg" alt=""/>
 
                                     </div>
 
                                     <div key={2} className=" minImg"  >
-                                        <button className="btn coverBtn">OUR OFFERS</button>
+                                        <button className="btn coverBtn">{this.props.lng.ourOffers.toUpperCase()} </button>
 
                                         <img className='minHeadImg' src="/header/miniImg2.jpg" alt=""/>
                                     </div>
                                     <div key={3} className=" minImg"  >
-                                        <button className="btn coverBtn"> <i style={{color:'red'}} className="far fa-dot-circle"></i>STREAMING</button>
+                                        <button className="btn coverBtn"> <i style={{color:'red'}} className="far fa-dot-circle"></i>{this.props.lng.streaming.toUpperCase()} </button>
 
                                         <img className='minHeadImg' src="/header/miniImg3.jpg" alt=""/>
                                     </div>
                                     <div key={4} className=" minImg"  >
-                                        <button className="btn coverBtn">GALLERY</button>
+                                        <button className="btn coverBtn">{this.props.lng.gallery.toUpperCase()} </button>
 
                                         <img className='minHeadImg' src="/header/miniImg4.jpg" alt=""/>
                                     </div>

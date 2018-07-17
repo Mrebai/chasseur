@@ -45,19 +45,19 @@ class HeadGallery extends Component {
 
         return (
             <div className="headGalleryContainer">
-                <h3 className=" SectionTitle">GALLERY</h3>
+                <h3 className=" SectionTitle">{this.props.lng.gallery.toUpperCase()}</h3>
                 <div className={'titleUnderlined'}></div>
 
                 <div className={"reversedSlider container"}>
                     <div className=" optionsBtnGallery d-flex justify-content-around mb-4">
-                        <button style={(this.state.slideIndex === 0)? {color:'#FF4081',boxShadow:'0 3px 5px #FF4081'} :{color:'#c4c4c4'} } className="btn" onClick={() => this.slider.slickGoTo(0)}>Albums</button>
-                        <button style={(this.state.slideIndex === 1)? {color:'#FF4081',boxShadow:'0 3px 5px #FF4081'} :{color:'#c4c4c4'} } className="btn" onClick={() => this.slider.slickGoTo(1)}>Videos</button>
-                        <button style={(this.state.slideIndex === 2)? {color:'#FF4081',boxShadow:'0 3px 5px #FF4081'} :{color:'#c4c4c4'} } className="btn" onClick={() => this.slider.slickGoTo(2)}>Streaming</button>
+                        <button style={(this.state.slideIndex === 0)? {color:'#FF4081',boxShadow:'0 3px 5px #FF4081'} :{color:'#c4c4c4'} } className="btn" onClick={() => this.slider.slickGoTo(0)}>{this.props.lng.albums.toUpperCase()}</button>
+                        <button style={(this.state.slideIndex === 1)? {color:'#FF4081',boxShadow:'0 3px 5px #FF4081'} :{color:'#c4c4c4'} } className="btn" onClick={() => this.slider.slickGoTo(1)}>{this.props.lng.videos.toUpperCase()}</button>
+                        <button style={(this.state.slideIndex === 2)? {color:'#FF4081',boxShadow:'0 3px 5px #FF4081'} :{color:'#c4c4c4'} } className="btn" onClick={() => this.slider.slickGoTo(2)}>{this.props.lng.streaming.toUpperCase()}</button>
                     </div>
 
                     <Slider ref={slider => (this.slider = slider)} {...settings}>
                         <div>
-                            <h4 className={'gallerySlideTitle'}> LATEST ALBUMS</h4>
+                            <h4 className={'gallerySlideTitle'}> {this.props.lng.latestAlbums.toUpperCase()}</h4>
                             <div className="row">
 
                                 {console.log(this.state.slideIndex)}
@@ -73,13 +73,12 @@ class HeadGallery extends Component {
                                     <HomeImgCard cardClass='gallerySmallCard' image={'/gallery/img1.jpg'}/>
                                 </div>
                             </div>
-                            <button className="btn gallerySlideViewMoreBtn">VIEW MORE</button>
+                            <button className="btn gallerySlideViewMoreBtn">{this.props.lng.viewMore.toUpperCase()}</button>
 
                         </div>
                         <div>
-                            <h4 className={'gallerySlideTitle'}> NEW VIDEOS</h4>
+                            <h4 className={'gallerySlideTitle'}> {this.props.lng.newVideos.toUpperCase()}</h4>
                             <div className="row">
-
 
 
                                 <div className="col-md-6 mb-2">
@@ -108,12 +107,12 @@ class HeadGallery extends Component {
 
                                 </div>
                             </div>
-                            <button className="btn gallerySlideViewMoreBtn">VIEW MORE</button>
+                            <button className="btn gallerySlideViewMoreBtn">{this.props.lng.viewMore.toUpperCase()}</button>
 
 
                         </div>
                         <div>
-                            <h4 className={'gallerySlideTitle'}> Live Streaming</h4>
+                            <h4 className={'gallerySlideTitle'}> {this.props.lng.liveStream.toUpperCase()}</h4>
                             <div className="row">
 
                                 <div className="col-md-12">
@@ -126,7 +125,7 @@ class HeadGallery extends Component {
                                 </div>
 
                             </div>
-                            <button className="btn gallerySlideViewMoreBtn">VIEW MORE</button>
+                            <button className="btn gallerySlideViewMoreBtn">{this.props.lng.viewMore.toUpperCase()}</button>
 
 
                         </div>

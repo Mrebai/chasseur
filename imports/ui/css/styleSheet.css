@@ -713,7 +713,7 @@ body{
 }
 
 .footerCardContainer{
-
+    overflow: hidden;
     height: 80px;
     width: 100%;
     margin-bottom: 4px;
@@ -732,6 +732,7 @@ body{
     color: #d1d1d1;
     font-size: .8rem;
     margin-left: .5rem;
+    margin-bottom: 0;
 }
 
 .footerCardText p:nth-child(2){
@@ -751,14 +752,19 @@ body{
     margin-top: 10px;
     margin-left: 20px;
 }
-
+.footerContactInfo{
+    word-break: break-all;
+}
 .footerContactInfo p:first-child{
+
     color: rgba(256,256,256,.2);
     margin-top: 10px;
     margin-bottom: 0;
     margin-left: 2rem;
 }
-
+.footerEMailAdd{
+    word-break: break-all;
+}
 .footerPhoneVal{
     color: #c4c4c4;
     font-size: 1.3rem;

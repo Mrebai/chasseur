@@ -18,7 +18,7 @@ export default Routes = ({client,id}) => {
                         <div>
 
                             <Switch>
-                                <Route exact path={"/"} render={(match) =>  <Home />}  />
+                                <Route exact path={"/"} render={(match) =>  <Home  />}  />
 
                             </Switch>
 

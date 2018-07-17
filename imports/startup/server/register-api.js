@@ -14,15 +14,17 @@ import likeSchema from '../../api/likes/Likes.graphql';
 import likeResolvers from '../../api/likes/resolvers';
 import catchema from '../../api/categories/category.graphql';
 import catResolvers from '../../api/categories/resolvers';
+import messageSchema from '../../api/messages/messages.graphql';
+import messageResolvers from '../../api/messages/resolvers';
 //hihihiiivvsqfcfsssdsssfffhhdssszsssssssssssssss
-// hiiiicdxcsdcscvcxndssjysgsgfssfssssdsssssss sfsssssdsssdssdsssssssss
+// hiiiicdxcsdcscvcxndssjyssxsgsgfssfssssdsssssss sfsssssdsssdssdsssssssss
 
 
-const typeDefs = [UserSchema,clothesSchema,reviewSchema,cartSchema,likeSchema,catchema];
+const typeDefs = [UserSchema,clothesSchema,reviewSchema,cartSchema,likeSchema,catchema,messageSchema];
 
 
 
-const resolvers = merge(UserResolvers,clothesResolvers,reviewResolvers,cartResolvers,likeResolvers,catResolvers);
+const resolvers = merge(UserResolvers,clothesResolvers,reviewResolvers,cartResolvers,likeResolvers,catResolvers,messageResolvers);
 
 Meteor.users.allow({
     insert: function (userId, doc) {

@@ -1,42 +1,42 @@
 import React from 'react';
 
-export default HeadOffers = () => {
+export default HeadOffers = ({lng}) => {
     return (
         <div className="headOfferContainer">
-            <h3 className=" SectionTitle offersTitle">OUR OFFERS</h3>
+            <h3 className=" SectionTitle offersTitle">{lng.offers}</h3>
             <div className='titleUnderlined'></div>
 
             <div className="container mt-4">
                 <div className="row myOffersContainer">
                     <ul className="list-group offset-sm-1 col-sm-3 p-0 secondaryOffer align-self-center">
-                        <li className="list-group-item"> btnCras justo odio</li>
-                        <li className="list-group-item">Dapibus ac facilisis in</li>
-                        <li className="list-group-item">Morbi leo risus</li>
-                        <li className="list-group-item">Porta ac consectetur ac</li>
-                        <li className="list-group-item">Vestibulum at eros</li>
+                        <li className="list-group-item"> {lng.offer1}</li>
+                        <li className="list-group-item">{lng.offer11}</li>
+                        <li className="list-group-item">{lng.offer12}</li>
+                        <li className="list-group-item">{lng.offer13}</li>
+                        <li className="list-group-item">{lng.offer1Price}</li>
 
                     </ul>
                     <ul className="list-group col-sm-4 p-0 mainOffer">
-                        <li className="list-group-item">Cras justo odio</li>
-                        <li className="list-group-item">Dapibus ac facilisis in</li>
-                        <li className="list-group-item">Morbi leo risus</li>
-                        <li className="list-group-item">Porta ac consectetur ac</li>
-                        <li className="list-group-item">Vestibulum at eros</li>
+                        <li className="list-group-item">{lng.offer2}</li>
+                        <li className="list-group-item">{lng.offer21}</li>
+                        <li className="list-group-item">{lng.offer22}</li>
+                        <li className="list-group-item">{lng.offer23}</li>
+                        <li className="list-group-item">{lng.offer2Price}</li>
 
                     </ul>
                     <ul className="list-group col-sm-3  p-0  secondaryOffer align-self-center ">
-                        <li className="list-group-item">Cras justo odio</li>
-                        <li className="list-group-item">Dapibus ac facilisis in</li>
-                        <li className="list-group-item">Morbi leo risus</li>
-                        <li className="list-group-item">Porta ac consectetur ac</li>
-                        <li className="list-group-item">Vestibulum at eros</li>
+                        <li className="list-group-item">{lng.offer3}</li>
+                        <li className="list-group-item">{lng.offer31}</li>
+                        <li className="list-group-item">{lng.offer32}</li>
+                        <li className="list-group-item">{lng.offer33}</li>
+                        <li className="list-group-item">{lng.offer3Price}</li>
 
                     </ul>
                 </div>
 
             </div>
 
-            <button className="btn ReserveNowBtn mb-4"> RESERVE NOW</button>
+            <button className="btn ReserveNowBtn mb-4"> {lng.reserveNow}</button>
 
 
         </div>

@@ -14,13 +14,13 @@ class TeamCard extends Component {
                 <div className="teamOverLine" style={{backgroundColor:this.props.color}}>
                 </div>
                 <div className="speech-bubble">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, quaerat quam? Ab aperiam blanditiis, consequuntur delectus deleniti dolorem id itaque maiores, nisi placeat possimus provident sapiente soluta, tenetur vel vero.</p>
+                    <p>{this.props.content}</p>
                 </div>
 
                 <div className="teamPerson" style={{backgroundImage:"url(/team/team1.jpg)"}}>
                 </div>
                 <p className="teamName"> Kabil Nefzi</p>
-                <p className="teamDesc"> Customer</p>
+                <p className="teamDesc"> {this.props.job}</p>
             </div>
         )
     }

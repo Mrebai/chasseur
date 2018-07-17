@@ -1,18 +1,22 @@
 import React,{Component} from "react";
 import Routes from './Routes'
-import {ThemeContext} from './context';
+import ThemeContext from './context/screenContext';
+import LanguageContext from './context/languageContext';
 import "./css/video-react.css"; // import css
+import {english,french} from './languages'
 import './css/styleSheet.css'
 import './css/resp.css'
 
 import { Query } from "react-apollo";
 import {userQuery} from './api/queries'
 
+
 class App extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { width: 0, height: 0 };
+        this.changeLng = (lng) => this.setState({language:lng});
+        this.state = {changeLng:this.changeLng, width: 0, height: 0,language:'fr' ,};
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
 
@@ -29,6 +33,7 @@ class App extends Component {
         this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
 
+
     user = ( ) => (
         <Query query={userQuery}>
             {({ loading, error, data }) => {
@@ -37,8 +42,9 @@ class App extends Component {
 
                 return (
                     <ThemeContext.Provider value={{width:this.state.width,user:data.user._id,userName:data.user.userName,cartLength:(data.user._id)?data.user.cart.length : 0 }}>
-
-                        <Routes/>
+                        <LanguageContext.Provider value={(this.state.language === 'fr')?{...this.state,...french}:{...english,...this.state}}>
+                        <Routes />
+                        </LanguageContext.Provider>
                     </ThemeContext.Provider>
                 );
             }}
