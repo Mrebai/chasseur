@@ -1,0 +1,30 @@
+/***************************** $$AdminNav ***********************/
+.adminContainer{
+
+}
+.adminNavContainer{
+    background-color:  rgba(0,0,0,.1);
+    height: 100%;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    border-right: 1px solid rgba(0,0,0,.2);
+    border-left: 1px solid rgba(0,0,0,.2);
+    position: static;
+    margin-bottom: 2rem;
+
+}
+
+.adminNavItem{
+    text-decoration: none;
+    color: #4c4c4c;
+    border-radius: 0;
+}
+
+.adminNavItem:hover{
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color:  rgba(254,69,101,.5);
+}
+
+.adminNavItem:focus {
+    text-decoration: none;
+}

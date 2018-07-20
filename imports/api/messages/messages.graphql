@@ -7,7 +7,7 @@ type message{
     message:String
 }
 
-extend type Mutation {
+ type Mutation {
     sendMsg(
         name: String!
         phone: Int!

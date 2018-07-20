@@ -4,27 +4,18 @@ import merge from 'lodash/merge'
 
 import UserSchema from '../../api/users/User.graphql';
 import UserResolvers from '../../api/users/resolvers';
-import clothesSchema from '../../api/clothes/Clothes.graphql';
-import clothesResolvers from '../../api/clothes/resolvers';
-import reviewSchema from '../../api/reviews/Reviews.graphql';
-import reviewResolvers from '../../api/reviews/resolvers';
-import cartSchema from '../../api/cart/cart.graphql';
-import cartResolvers from '../../api/cart/resolvers';
-import likeSchema from '../../api/likes/Likes.graphql';
-import likeResolvers from '../../api/likes/resolvers';
-import catchema from '../../api/categories/category.graphql';
-import catResolvers from '../../api/categories/resolvers';
+
 import messageSchema from '../../api/messages/messages.graphql';
 import messageResolvers from '../../api/messages/resolvers';
 //hihihiiivvsqfcfsssdsssfffhhdssszsssssssssssssss
-// hiiiicdxcsdcscvcxndssjyssxsgsgfssfssssdsssssss sfsssssdsssdssdsssssssss
+// hiiiicdxcsdcscvcxndssjyssxssgsgfssfssssssssdsssssss sfsssssdsssdssdsssssssss
 
 
-const typeDefs = [UserSchema,clothesSchema,reviewSchema,cartSchema,likeSchema,catchema,messageSchema];
+const typeDefs = [UserSchema,messageSchema];
 
 
 
-const resolvers = merge(UserResolvers,clothesResolvers,reviewResolvers,cartResolvers,likeResolvers,catResolvers,messageResolvers);
+const resolvers = merge(UserResolvers,messageResolvers);
 
 Meteor.users.allow({
     insert: function (userId, doc) {

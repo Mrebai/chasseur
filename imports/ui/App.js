@@ -2,10 +2,11 @@ import React,{Component} from "react";
 import Routes from './Routes'
 import ThemeContext from './context/screenContext';
 import LanguageContext from './context/languageContext';
-import "./css/video-react.css"; // import css
 import {english,french} from './languages'
 import './css/styleSheet.css'
+import './css/admin.css'
 import './css/resp.css'
+
 
 import { Query } from "react-apollo";
 import {userQuery} from './api/queries'

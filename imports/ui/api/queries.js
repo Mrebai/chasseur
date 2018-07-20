@@ -6,16 +6,6 @@ export const userQuery = gql`
             _id
             email
             userName
-            cart{
-                _id
-                userId
-                itemId
-                name
-                img
-                size
-                price
-            }
-          
         }
     }
 `;
