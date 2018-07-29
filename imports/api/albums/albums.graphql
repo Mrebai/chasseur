@@ -1,6 +1,6 @@
 type album {
     _id: ID
-    date: Date
+    date: String
     title: String
     info: String
     thumbnail: String

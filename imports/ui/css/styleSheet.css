@@ -204,6 +204,8 @@ body{
     width: auto;
 
 }
+
+
 .headMainSlider{
     position: relative;
     height: 500px;
@@ -278,6 +280,32 @@ body{
     border: 1px solid #C4C4C4;
     margin-bottom: 20px;
 }
+
+.imgView{
+    height: 240px;
+    width: 100%;
+    border-radius: 0;
+
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.imgImgView{
+    border: 1px solid #C4C4C4;
+    width: 100%;
+    height: 100%;
+}
+.videoCardBody{
+    margin-bottom: auto;
+    bottom: 0;
+    display: block;
+    background-color: #EEEEEE;
+    color: rgba(0,0,0,.8);
+    width: 100%;
+    font-size: .6rem;
+    padding:  0 8px;
+}
  .headCardBody{
      margin-bottom: auto;
      bottom: 0;
@@ -314,11 +342,11 @@ body{
 
 @keyframes aBiggerBG {
     from {transform:scale(1,1)}
-    to {transform:scale(1.05,1.05)}
+    to {transform:scale(1.02,1.02)}
 }
 
 @keyframes aSmallBG {
-    from {transform:scale(1.05,1.05)}
+    from {transform:scale(1.02,1.02)}
     to {transform:scale(1,1)}
 }
 
@@ -791,4 +819,8 @@ body{
 
 .mailIcon{
     margin-left: 13px;
+}
+.imageSourceGal{
+    width: 100%;
+    height: auto;
 }

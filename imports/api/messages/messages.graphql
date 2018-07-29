@@ -5,6 +5,7 @@ type message{
     email: String
     subject: String
     message:String
+    date:String
 }
 
  type Mutation {

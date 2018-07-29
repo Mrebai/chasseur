@@ -1,6 +1,6 @@
 type video {
     _id: ID
-    date: Date
+    date: String
     title: String
     info: String
     video: String

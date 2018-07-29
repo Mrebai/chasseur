@@ -10,7 +10,7 @@ import HomeBrands from './homeBrands'
 import HeadTeam from  './headTeam'
 import HomeContact from './homeContact'
 import Footer from './footer'
-export default Home = (props) => {
+export default Home = ({data}) => {
 
     return(
         <ThemeContext.Consumer>
@@ -20,7 +20,6 @@ export default Home = (props) => {
                   <LanguageContext.Consumer>
                       {
                           lng=>{
-                              console.log(lng);
                               return(
 
                                   <div>
@@ -28,7 +27,7 @@ export default Home = (props) => {
                                       <Head lng={lng} />
                                       <HomeWhyUs lng={lng}  width={theme.width}/>
                                       <HeadOffers lng={lng} />
-                                      <HeadGallery lng={lng} />
+                                      <HeadGallery data={data} lng={lng} />
                                       <HomeBrands lng={lng} />
                                       <HeadTeam lng={lng} />
                                       <HomeContact lng={lng} />

@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-class HomeVideoCard extends Component {
+class GalCard extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -30,13 +30,14 @@ class HomeVideoCard extends Component {
         return (
             <div className={"vidCardContainer " }>
 
-                <div onMouseEnter={() => {this.animation('bigger')}} onMouseLeave={() => {this.animation('smaller')}} className={"card " + this.props.cardClass + ' ' + this.state.size} >
+                <div  className={"card " + this.props.cardClass + ' ' + this.state.size} >
 
                     <div className="embed-responsive embed-responsive-21by9">
                         {(this.props.type === 'video')?
                             <iframe  className="embed-responsive-item" src={"https://www.youtube.com/embed/"+ this.props.data.video}/>:
                             <iframe  className="embed-responsive-item" src={"https://www.youtube.com/embed/"+ this.props.data.link}/>
                         }
+
                     </div>
                     <div className="card-body videoCardBody d-flex justify-content-between">
                         <div>
@@ -51,6 +52,6 @@ class HomeVideoCard extends Component {
     }
 }
 
-export default HomeVideoCard
+export default GalCard
 
 

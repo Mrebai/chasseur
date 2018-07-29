@@ -22,3 +22,57 @@ export const sendMsg = gql`
     }
 `;
 
+// create item mutation
+export const addAlbum = gql`
+    mutation addAlbum(
+    $title: String!
+    $info: String!
+    $thumbnail: String!
+    $images: [String]!
+    ){
+        addAlbum(
+            title: $title
+            info: $info
+            thumbnail: $thumbnail
+            images: $images
+        ){
+            _id
+        }
+    }
+`;
+
+export const addVideo = gql`
+    mutation addVideo(
+    $title: String!
+    $info: String!
+    $video: String!
+
+    ){
+        addVideo(
+            title: $title
+            info: $info
+            video: $video
+        ){
+            _id
+        }
+    }
+`;
+
+export const addStreaming = gql`
+    mutation addStreaming(
+    $title: String!
+    $info: String!
+    $link: String!
+    $live:Boolean
+
+    ){
+        addStreaming(
+            title: $title
+            info: $info
+            link: $link
+            live:$live
+        ){
+            _id
+        }
+    }
+`;

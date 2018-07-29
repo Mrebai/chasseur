@@ -41,6 +41,7 @@
     "react-slick": "^0.23.1",
     "react-slider": "^0.11.2",
     "react-svg": "^4.1.8",
+    "react-toggle-button": "^2.2.0",
     "react-youtube": "^7.6.0",
     "reactstrap": "^6.0.1",
     "redux": "^3.7.2",

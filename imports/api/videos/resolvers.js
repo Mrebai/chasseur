@@ -1,14 +1,14 @@
 import videos from './videos'
 
 export default {
-    query:{
+    Query:{
         getVideos(obj,args,ctx){
-            return videos.find().fetch();
+            return videos.find().fetch().reverse();
         }
     },
-    mutation:{
+    Mutation:{
         addVideo(obj,{title,info,video},ctx){
-            const date = new Date();
+            const date = new Date().toISOString();
             const id = videos.insert({title,date,info,video});
             return videos.findOne(id);
         },

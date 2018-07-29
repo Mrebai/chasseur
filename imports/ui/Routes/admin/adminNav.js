@@ -10,7 +10,10 @@ export default class AdminNav extends React.Component {
         this.changeBtn=  this.changeBtn.bind(this)
     }
 
-    changeBtn = (btn) => this.setState({activeBtn:btn});
+    changeBtn = (btn) => {
+        this.setState({activeBtn:btn});
+        this.props.currentTab(btn);
+    };
     render() {
         return (
             <div className='container'>

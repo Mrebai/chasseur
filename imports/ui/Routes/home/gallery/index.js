@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Slider from 'react-slick'
 import HomeImgCard from '../../../components/cards/homeImgCard'
-import YouTube from 'react-youtube';
+import HomeVideoCard from '../../../components/cards/homeVideoCard'
 class HeadGallery extends Component {
     constructor(props) {
         super(props);
@@ -60,17 +60,17 @@ class HeadGallery extends Component {
                             <h4 className={'gallerySlideTitle'}> {this.props.lng.latestAlbums.toUpperCase()}</h4>
                             <div className="row">
 
-                                {console.log(this.state.slideIndex)}
+                                {console.log(this.props.data)}
                                 <div className="col-md-4">
-                                    <HomeImgCard cardClass='galleryBigCard' image={'/gallery/img1.jpg'}/>
+                                    <HomeImgCard cardClass='galleryBigCard' data={this.props.data.getAlbums[0]} />
                                 </div>
                                 <div className="col-md-4">
-                                    <HomeImgCard cardClass='gallerySmallCard gallerySmallCardFirst' image={'/gallery/img1.jpg'}/>
-                                    <HomeImgCard cardClass='gallerySmallCard' image={'/gallery/img1.jpg'}/>
+                                    <HomeImgCard cardClass='gallerySmallCard gallerySmallCardFirst' data={this.props.data.getAlbums[1]}/>
+                                    <HomeImgCard cardClass='gallerySmallCard' data={this.props.data.getAlbums[2]}/>
                                 </div>
                                 <div className="col-md-4">
-                                    <HomeImgCard cardClass='gallerySmallCard gallerySmallCardFirst' image={'/gallery/img1.jpg'}/>
-                                    <HomeImgCard cardClass='gallerySmallCard' image={'/gallery/img1.jpg'}/>
+                                    <HomeImgCard cardClass='gallerySmallCard gallerySmallCardFirst' data={this.props.data.getAlbums[3]}/>
+                                    <HomeImgCard cardClass='gallerySmallCard' data={this.props.data.getAlbums[4]}/>
                                 </div>
                             </div>
                             <button className="btn gallerySlideViewMoreBtn">{this.props.lng.viewMore.toUpperCase()}</button>
@@ -82,29 +82,17 @@ class HeadGallery extends Component {
 
 
                                 <div className="col-md-6 mb-2">
-                                    <div className="embed-responsive embed-responsive-21by9">
-                                        <iframe  className="embed-responsive-item" src="https://www.youtube.com/embed/iyLkHIftPis"></iframe>
-                                    </div>
-
+                                    <HomeVideoCard type={'video'} data={this.props.data.getVideos[0]}/>
                                 </div>
                                 <div className="col-md-6 mb-2">
-                                    <div className="embed-responsive embed-responsive-21by9">
-                                        <iframe  className="embed-responsive-item" src="https://www.youtube.com/embed/iyLkHIftPis"></iframe>
-                                    </div>
-
+                                    <HomeVideoCard type={'video'} data={this.props.data.getVideos[1]}/>
                                 </div>
                                 <div className="col-md-6 mb-2">
-                                    <div className="embed-responsive embed-responsive-21by9">
-                                        <iframe  className="embed-responsive-item" src="https://www.youtube.com/embed/iyLkHIftPis"></iframe>
-                                    </div>
-
+                                    <HomeVideoCard type={'video'} data={this.props.data.getVideos[2]}/>
                                 </div>
 
                                 <div className="col-md-6 mb-2">
-                                    <div className="embed-responsive embed-responsive-21by9">
-                                        <iframe  className="embed-responsive-item" src="https://www.youtube.com/embed/iyLkHIftPis"></iframe>
-                                    </div>
-
+                                    <HomeVideoCard type={'video'} data={this.props.data.getVideos[3]}/>
                                 </div>
                             </div>
                             <button className="btn gallerySlideViewMoreBtn">{this.props.lng.viewMore.toUpperCase()}</button>
@@ -117,10 +105,7 @@ class HeadGallery extends Component {
 
                                 <div className="col-md-12">
 
-                                        <div className="embed-responsive embed-responsive-21by9">
-                                            <iframe  className="embed-responsive-item" src="https://www.youtube.com/embed/iyLkHIftPis"></iframe>
-                                        </div>
-
+                                    <HomeVideoCard data={this.props.data.getStreaming[0]}/>
 
                                 </div>
 

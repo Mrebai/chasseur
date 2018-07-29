@@ -1,6 +1,6 @@
 type streaming {
     _id: ID
-    date: Date
+    date: String
     title: String
     info: String
     link: String
@@ -15,7 +15,7 @@ extend type Mutation {
     addStreaming(
         title: String!
         info: String!
-        link: String
+        link: String!
         live:Boolean
     ): streaming
 
@@ -23,7 +23,7 @@ extend type Mutation {
         _id: String!
         title: String!
         info: String!
-        link: String
+        link: String!
         live:Boolean
     ): streaming
 

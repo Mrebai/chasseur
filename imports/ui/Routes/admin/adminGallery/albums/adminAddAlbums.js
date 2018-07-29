@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
 import AddAlbumImgs from './addAlbumImgs'
+import {graphql} from 'react-apollo'
+import {addAlbum} from '../../../../api/mutations'
+
 
 class AdminAddAlbum extends Component {
     constructor(props) {
@@ -38,6 +41,13 @@ class AdminAddAlbum extends Component {
     };
     submitForm = (e) =>{
         e.preventDefault();
+        this.props.addAlbumMutation({variables:{
+                title:this.title.value,
+                info: this.desc.value,
+                thumbnail: (this.state.mainImage.length > 0)?this.state.mainImage: this.state.images[0],
+                images:  this.state.images
+
+            }}). then(data => console.log(data)). catch(e => console.log(e))
     };
     render() {
         return (
@@ -58,8 +68,8 @@ class AdminAddAlbum extends Component {
                     <div className="form-group">
                         <label htmlFor="albumTitle">Add Images</label>
                         <div className="row">
-                            <input value={this.state.imageInput} onChange={(e) => this.currentImage(e.target.value)} type="text" className="form-control col-md-9" id="albumTitle"  placeholder="Paste image link here" required/>
-                            <button className="btn col-md-3" onClick={() => this.addImage()}>Add Image</button>
+                            <input value={this.state.imageInput} onChange={(e) => this.currentImage(e.target.value)} type="text" className="form-control col-md-9" id="albumTitle"  placeholder="Paste image link here" />
+                            <button type="button" className="btn col-md-3" onClick={() => this.addImage()}>Add Image</button>
                         </div>
                         {
                             (this.state.imageInput.length)?
@@ -67,11 +77,13 @@ class AdminAddAlbum extends Component {
                                 <div></div>
                         }
                     </div>
+                    <div>
+                        <AddAlbumImgs images={this.state.images} mainImage={this.state.mainImage} deleteImage={this.deleteImage} setMainImg={this.setMainImg}/>
 
-                    <AddAlbumImgs images={this.state.images} mainImage={this.state.mainImage} deleteImage={this.deleteImage} setMainImg={this.setMainImg}/>
+                    </div>
 
                     <button type="submit" className="btn btn-primary mt-4">Submit</button>
-                    <button  className="btn btn-link ml-4 mt-4">Cancel</button>
+                    <button  type="button" className="btn btn-link ml-4 mt-4">Cancel</button>
 
                 </form>
             </div>
@@ -79,4 +91,4 @@ class AdminAddAlbum extends Component {
     }
 }
 
-export default AdminAddAlbum
+export default graphql(addAlbum,{name:'addAlbumMutation'})(AdminAddAlbum);

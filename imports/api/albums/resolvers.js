@@ -2,14 +2,14 @@ import albums from './albums'
 import videos from "../videos/videos";
 
 export default {
-    query:{
+    Query:{
         getAlbums(obj,args,ctx){
-            return albums.find().fetch();
+            return albums.find().fetch().reverse();
         }
     },
-    mutation:{
+    Mutation:{
         addAlbum(obj,{title,thumbnail,info,images},ctx){
-            const date = new Date();
+            const date = new Date().toISOString();
             const id = albums.insert({title,date,thumbnail,info,images});
             return albums.findOne(id);
         },

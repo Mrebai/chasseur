@@ -2,14 +2,14 @@ import streaming from './streaming'
 
 
 export default {
-    query:{
+    Query:{
         getStreaming(obj,args,ctx){
-            return streaming.find().fetch();
+            return streaming.find().fetch().reverse();
         }
     },
-    mutation:{
+    Mutation:{
         addStreaming(obj,{title,info,link,live},ctx){
-            const date = new Date();
+            const date = new Date().toISOString();
             const id = streaming.insert({title,date,info,link,live});
             return streaming.findOne(id);
         },
