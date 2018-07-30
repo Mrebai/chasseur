@@ -824,3 +824,13 @@ body{
     width: 100%;
     height: auto;
 }
+
+/***************************** $$AdminCards ***********************/
+.adminCardContainer{
+    background-color: #ffe2ec;
+    border: 1px solid #afafaf;
+}
+.adminCardFrame{
+    width: 100%;
+    height: auto;
+}

@@ -60,17 +60,37 @@ class HeadGallery extends Component {
                             <h4 className={'gallerySlideTitle'}> {this.props.lng.latestAlbums.toUpperCase()}</h4>
                             <div className="row">
 
-                                {console.log(this.props.data)}
+
+                                {
+                                    (this.props.data.getAlbums.length > 0)?
+                                        <div className="col-md-4">
+                                            <HomeImgCard cardClass='galleryBigCard' data={this.props.data.getAlbums[0]} />
+                                        </div>:
+                                        ''
+                                }
+
                                 <div className="col-md-4">
-                                    <HomeImgCard cardClass='galleryBigCard' data={this.props.data.getAlbums[0]} />
+                                    {
+                                        (this.props.data.getAlbums.length > 2)?
+                                            <div >
+                                                <HomeImgCard cardClass='gallerySmallCard gallerySmallCardFirst' data={this.props.data.getAlbums[1]}/>
+                                                <HomeImgCard cardClass='gallerySmallCard' data={this.props.data.getAlbums[2]}/>
+                                            </div>
+                                            :
+                                            ''
+                                    }
+
                                 </div>
                                 <div className="col-md-4">
-                                    <HomeImgCard cardClass='gallerySmallCard gallerySmallCardFirst' data={this.props.data.getAlbums[1]}/>
-                                    <HomeImgCard cardClass='gallerySmallCard' data={this.props.data.getAlbums[2]}/>
-                                </div>
-                                <div className="col-md-4">
-                                    <HomeImgCard cardClass='gallerySmallCard gallerySmallCardFirst' data={this.props.data.getAlbums[3]}/>
-                                    <HomeImgCard cardClass='gallerySmallCard' data={this.props.data.getAlbums[4]}/>
+                                    {
+                                        (this.props.data.getAlbums.length > 4)?
+                                            <div >
+                                                <HomeImgCard cardClass='gallerySmallCard gallerySmallCardFirst' data={this.props.data.getAlbums[3]}/>
+                                                <HomeImgCard cardClass='gallerySmallCard' data={this.props.data.getAlbums[4]}/>
+                                            </div>:
+                                            ''
+                                    }
+
                                 </div>
                             </div>
                             <button className="btn gallerySlideViewMoreBtn">{this.props.lng.viewMore.toUpperCase()}</button>

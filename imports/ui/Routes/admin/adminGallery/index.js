@@ -13,9 +13,9 @@ class GlleryIndex extends Component {
             <div className="">
 
                 {
-                  (this.props.nav === 'videos')? <AdminVideosIndex/>:
-                      (this.props.nav === 'streaming')? <AdminStreamIndex/>:
-                          (this.props.nav === 'albums')? <AdminAlbumIndex/>:
+                  (this.props.nav === 'videos')? <AdminVideosIndex data={this.props.data.getVideos} />:
+                      (this.props.nav === 'streaming')? <AdminStreamIndex  data={this.props.data.getStreaming}/>:
+                          (this.props.nav === 'albums')? <AdminAlbumIndex data={this.props.data.getAlbums}/>:
                               <div></div>
 
                 }
