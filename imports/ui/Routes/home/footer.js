@@ -1,6 +1,6 @@
 import React from 'react'
 import Slider from 'react-slick'
-export default Footer = ({lng}) => {
+export default Footer = ({lng,data}) => {
     const settings = {
         dots: false,
         arrows:false,
@@ -38,51 +38,21 @@ export default Footer = ({lng}) => {
 
                         <div className='footerUnderlined'></div>
                         <Slider {...settings}>
-                            <div className="footerCardContainer d-flex justify-content-start">
-                                <div className="footerImgContainer" style={{backgroundImage:"url(/gallery/img1.jpg)",width:'80px' }}></div>
-                                    <div className="d-flex flex-column footerCardText">
-                                        <p>Lorem ipsum dolor sit.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, voluptatum.</p>
+                            {
+                                data.slice(0,4).map(item =>
+
+                                    <div className="footerCardContainer d-flex justify-content-start">
+                                        <div className="footerImgContainer" style={{backgroundImage:"url("+ item.thumbnail  +")",width:'80px' }}></div>
+                                        <div className="d-flex flex-column footerCardText">
+                                            <p>{item.title}</p>
+                                            <p>{item.info}</p>
+
+                                        </div>
 
                                     </div>
 
-                            </div>
-                            <div className="footerCardContainer d-flex justify-content-start">
-                                <div className="footerImgContainer" style={{backgroundImage:"url(/gallery/img1.jpg)" }}></div>
-
-                                <div className="d-flex flex-column footerCardText">
-                                    <p>Lorem ipsum dolor sit.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, voluptatum.</p>
-
-                                </div>
-                            </div>
-                            <div className="footerCardContainer d-flex justify-content-start">
-                                <div className="footerImgContainer" style={{backgroundImage:"url(/gallery/img1.jpg)" }}></div>
-
-                                <div className="d-flex flex-column footerCardText">
-                                    <p>Lorem ipsum dolor sit.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, voluptatum.</p>
-
-                                </div>
-                            </div>
-                            <div className="footerCardContainer d-flex justify-content-start">
-                                <div className="footerImgContainer" style={{backgroundImage:"url(/gallery/img1.jpg)" }}></div>
-
-                                <div className="d-flex flex-column footerCardText">
-                                    <p>Lorem ipsum dolor sit.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, voluptatum.</p>
-
-                                </div>
-                            </div>
-                            <div className="footerCardContainer d-flex justify-content-start">
-                                <div className="footerImgContainer" style={{backgroundImage:"url(/gallery/img1.jpg)" }}></div>
-
-                                <div className="d-flex flex-column footerCardText">
-                                    <p>Lorem ipsum dolor sit.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, voluptatum.</p>
-
-                                </div>
-                            </div>
+                                )
+                            }
                         </Slider>
                     </div>
                     <div className="col-md-4">

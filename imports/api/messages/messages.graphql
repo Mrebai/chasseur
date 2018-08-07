@@ -3,19 +3,30 @@ type message{
     name: String
     phone: Int
     email: String
+    offer: String
+    resDate: String
     subject: String
     message:String
     date:String
 }
 
+extend type Query {
+    getMessage:[message]
+}
  type Mutation {
     sendMsg(
-        name: String!
-        phone: Int!
-        email: String!
-        subject: String!
-        message:String!
+         name: String!
+         phone: Int!
+         email: String!
+         offer: String!
+         resDate: String
+         subject: String!
+         message:String!
 
     ):message
+
+     deleteMsg(
+         _id: String!
+     ):message
 }
 

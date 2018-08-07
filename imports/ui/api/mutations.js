@@ -6,6 +6,8 @@ export const sendMsg = gql`
     $name: String!
     $phone: Int!
     $email: String!
+    $offer: String!
+    $resDate: String
     $subject: String!
     $message:String!
   
@@ -14,6 +16,8 @@ export const sendMsg = gql`
             name: $name
             phone: $phone
             email: $email
+            offer: $offer
+            resDate: $resDate
             subject: $subject
             message:$message
         ){
@@ -104,6 +108,33 @@ export const deleteVideo = gql`
 `;
 
 
+export const deleteMsg = gql`
+    mutation deleteMsg(
+    $id:String!
+    ){
+        deleteMsg(
+            _id:$id
+        ){
+            _id
+        }
+    }
+`;
+
+
+export const deleteStreaming = gql`
+    mutation deleteStreaming(
+    $id:String!
+    ){
+        deleteStreaming(
+            _id:$id
+        ){
+            _id
+        }
+    }
+`;
+
+
+
 export const editAlbum = gql`
     mutation editAlbum(
     $id: String!
@@ -140,4 +171,36 @@ export const editVideo = gql`
             _id
         }
     }
+`;
+
+export const editStreaming = gql`
+  mutation editStreaming(
+      $id: String!
+      $title: String!
+      $info: String!
+      $link: String!
+  ){
+      editStreaming(
+          _id: $id
+          title: $title
+          info: $info
+          link: $link
+      ){
+          _id
+      }
+  }
+`;
+
+export const toggleLive = gql`
+  mutation toggleLive(
+      $id:String!
+      $live:Boolean
+  ){
+      toggleLive(
+          _id:$id
+          live:$live
+      ){
+          _id
+      }
+  }
 `;

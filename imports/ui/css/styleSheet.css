@@ -834,3 +834,41 @@ body{
     width: 100%;
     height: auto;
 }
+
+
+
+/***************************** $$AdminMessage ***********************/
+.messageHead{
+    border-bottom: 1px solid #D0D0D0;
+    color: #555555;
+
+}
+
+.messageHead:hover{
+    background-color:#E0E0E0;
+}
+
+.messageHead div  p , .messageHead div:last-child {
+    margin-top: 1rem;
+    margin-bottom:  1rem;
+}
+
+.messageHead div:last-child{
+    color: #9a9a9a;
+}
+
+.messageHead div:last-child span{
+    color: #ADADAD;
+}
+
+.messageHead div:last-child span:hover{
+    color: #555555;
+}
+
+.msgBodyElem div:last-child{
+    color: #4C4C4C;
+}
+.msgBodyElem div:first-child{
+    color: #A4A4A4;
+    font-weight: bold;
+}

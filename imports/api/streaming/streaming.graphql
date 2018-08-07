@@ -24,7 +24,7 @@ extend type Mutation {
         title: String!
         info: String!
         link: String!
-        live:Boolean
+
     ): streaming
 
     toggleLive(

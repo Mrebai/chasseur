@@ -41,21 +41,18 @@ export const galleryQuery = gql`
 `;
 
 
-export const clothesQuery = gql`
-    query clothes($gender:String $tags:[String] $search:String $minPrice:Int $maxPrice:Int ){
-        clothes(gender:$gender tags:$tags search:$search minPrice:$minPrice maxPrice:$maxPrice){
+export const getMessage = gql`
+    query getMessage{
+        getMessage{
             _id
             name
-            productId
-            price
-            description
-            sizes
-            tag
-            gender
-            comingSoon
-            availability
-            images
-            mainImage
+            phone
+            email
+            offer
+            resDate
+            subject
+            message
+            date
         }
     }
 `;

@@ -10,12 +10,12 @@ export default {
     Mutation:{
         addStreaming(obj,{title,info,link,live},ctx){
             const date = new Date().toISOString();
-            const id = streaming.insert({title,date,info,link,live});
+            const id = streaming.insert({title,date,info,link,live: live || false});
             return streaming.findOne(id);
         },
-        editStreaming(obj,{_id,title,info,link,live},ctx){
+        editStreaming(obj,{_id,title,info,link},ctx){
             const id = streaming.update({_id},{
-                $set:{title,info,link,live}
+                $set:{title,info,link}
             });
             return streaming.findOne(id);
         },

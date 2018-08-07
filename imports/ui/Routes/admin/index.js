@@ -1,9 +1,13 @@
 import React, {Component} from 'react'
 import AdminNav from './adminNav'
 import {Route,Switch,Link} from "react-router-dom"
-import AdminMsgs from './inbox/adminAddMsgs'
+import showMessages from './inbox'
 import AdminEditAlbum from './adminGallery/albums/adminEditAlbum'
 import AdminEditVideo from './adminGallery/videos/adminEditVideo'
+import AdminEditStream from './adminGallery/straming/editStreaming'
+import AdminAddAlbum from './adminGallery/albums/adminAddAlbums'
+import AdminAddStream from './adminGallery/straming/adminAddStreaming'
+import AdminAddVideo from './adminGallery/videos/adminAddVideos'
 import GlleryIndex from './adminGallery'
 class AdminIndex extends Component {
     constructor(props) {
@@ -24,12 +28,16 @@ class AdminIndex extends Component {
 
                         <Switch>
                             {
-                                (this.state.nav.length === 0 || this.state.nav === 'inbox')?<Route exact  path={this.props.match.path} component={AdminMsgs}/>:
+                                (this.state.nav.length === 0 || this.state.nav === 'inbox')?<Route exact  path={this.props.match.path} component={showMessages}/>:
                                     <Route  path={this.props.match.path} render={(route) => <GlleryIndex data={this.props.data} match={route.match} nav={this.state.nav}/> }/>
                             }
 
                             <Route exact  path={this.props.match.path + '/editimage/:id'} render={(route) => <AdminEditAlbum data={this.props.data.getAlbums} match={route.match} nav={this.state.nav}/>}/>
                             <Route exact  path={this.props.match.path + '/editvideo/:id'} render={(route) => <AdminEditVideo data={this.props.data.getVideos} match={route.match} nav={this.state.nav}/>}/>
+                            <Route exact  path={this.props.match.path + '/editstream/:id'} render={(route) => <AdminEditStream data={this.props.data.getStreaming} match={route.match} nav={this.state.nav}/>}/>
+                            <Route exact  path={this.props.match.path + '/addalbum'} render={(route) => <AdminAddAlbum  match={route.match} />}/>
+                            <Route exact  path={this.props.match.path + '/addstream'} render={(route) => <AdminAddStream  match={route.match} />}/>
+                            <Route exact  path={this.props.match.path + '/addvideo'} render={(route) => <AdminAddVideo  match={route.match} />}/>
                         </Switch>
 
 

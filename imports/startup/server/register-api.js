@@ -17,8 +17,8 @@ import videosResolvers from '../../api/videos/resolvers';
 import streamingSchema from '../../api/streaming/streaming.graphql';
 import streamingResolvers from '../../api/streaming/resolvers';
 
-//hihihiiivvsqfcfsssdsssfffhhdssszsssssssssssssss
-// hiiiicdxcsdcscvcxndssssjyssxssgsgfssfssssssssdsssssss sfsssssdsssdssssssssssdsssssssss
+//hihihiiivvsqfcfsssdssssfffhhdssszssssssssssssssss
+// hiiiicdxcsdcscvcxndsssssjyssxssgsgfssfsssssssssssssdsssssssss sfsssssdsssdssssssssssdsssssssss
 
 
 const typeDefs = [UserSchema,messageSchema,albumSchema,videosSchema,streamingSchema];

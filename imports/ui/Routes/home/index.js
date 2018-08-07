@@ -31,7 +31,7 @@ export default Home = ({data}) => {
                                       <HomeBrands lng={lng} />
                                       <HeadTeam lng={lng} />
                                       <HomeContact lng={lng} />
-                                      <Footer lng={lng} />
+                                      <Footer data={data.getAlbums} lng={lng} />
                                   </div>
 
                               )
