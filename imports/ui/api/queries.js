@@ -37,6 +37,11 @@ export const galleryQuery = gql`
             link
             live
         }
+        user{
+            _id
+            email
+            userName
+        }
     }
 `;
 

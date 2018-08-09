@@ -9,6 +9,7 @@ import AdminAddAlbum from './adminGallery/albums/adminAddAlbums'
 import AdminAddStream from './adminGallery/straming/adminAddStreaming'
 import AdminAddVideo from './adminGallery/videos/adminAddVideos'
 import GlleryIndex from './adminGallery'
+import SignUp from '../account/signUp'
 class AdminIndex extends Component {
     constructor(props) {
         super(props);
@@ -28,7 +29,8 @@ class AdminIndex extends Component {
 
                         <Switch>
                             {
-                                (this.state.nav.length === 0 || this.state.nav === 'inbox')?<Route exact  path={this.props.match.path} component={showMessages}/>:
+                                (this.state.nav.length === 0 || this.state.nav === 'inbox')?<Route exact  path={this.props.match.path} component={showMessages}/>:( this.state.nav === 'signUp')?
+                                    <Route  path={this.props.match.path} render={(match) => <SignUp match={match.match}/> } />:
                                     <Route  path={this.props.match.path} render={(route) => <GlleryIndex data={this.props.data} match={route.match} nav={this.state.nav}/> }/>
                             }
 
@@ -38,6 +40,7 @@ class AdminIndex extends Component {
                             <Route exact  path={this.props.match.path + '/addalbum'} render={(route) => <AdminAddAlbum  match={route.match} />}/>
                             <Route exact  path={this.props.match.path + '/addstream'} render={(route) => <AdminAddStream  match={route.match} />}/>
                             <Route exact  path={this.props.match.path + '/addvideo'} render={(route) => <AdminAddVideo  match={route.match} />}/>
+
                         </Switch>
 
 

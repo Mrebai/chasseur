@@ -1,6 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick'
-export default AddAlbumImgs = ({images,mainImage,setMainImg,deleteImage}) => {
+import {withRouter} from 'react-router-dom'
+const AddAlbumImgs = ({images,mainImage,setMainImg,deleteImage}) => {
     const settings = {
         dots: true,
         infinite: false,
@@ -62,4 +63,6 @@ export default AddAlbumImgs = ({images,mainImage,setMainImg,deleteImage}) => {
 
         </div>
     )
-}
+};
+
+export default withRouter(AddAlbumImgs);

@@ -41,7 +41,7 @@ export default Footer = ({lng,data}) => {
                             {
                                 data.slice(0,4).map(item =>
 
-                                    <div className="footerCardContainer d-flex justify-content-start">
+                                    <div key={item._id} className="footerCardContainer d-flex justify-content-start">
                                         <div className="footerImgContainer" style={{backgroundImage:"url("+ item.thumbnail  +")",width:'80px' }}></div>
                                         <div className="d-flex flex-column footerCardText">
                                             <p>{item.title}</p>

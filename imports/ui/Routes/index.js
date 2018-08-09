@@ -1,13 +1,14 @@
 import React from 'react'
-import {BrowserRouter,Route,Switch,Link} from "react-router-dom"
+import {BrowserRouter,Route,Switch,Link,Redirect} from "react-router-dom"
 import Home from './home'
 import AdminRoute from './admin'
 import GalleryIndex from './gallery'
 import {galleryQuery} from '../api/queries'
-
+import Login from './account/signIn'
+import SignUp from './account/signUp'
 import { Query } from "react-apollo";
 
-export default Routes = ({client,id}) => {
+export default Routes = ({user,id}) => {
 
     const Dogs = ( ) => (
         <Query query={galleryQuery}>
@@ -19,8 +20,12 @@ export default Routes = ({client,id}) => {
 
                     <Switch>
                         <Route exact path={"/"} render={(match) =>  <Home match={match.match}  data={data}/>}  />
-                        <Route  path={"/admin"} render={(match) => <AdminRoute match={match.match} data={data}/> } />
+                        <Route  path={"/admin"} render={(match) =>
+                            (user._id)?    <AdminRoute match={match.match} data={data}/> : <Redirect to='/' />
+                         } />
                         <Route  path={"/gallery"} render={(match) => <GalleryIndex match={match.match} data={data}/> } />
+                        <Route  path={"/signin"} render={(match) => <Login match={match.match} data={data}/> } />
+
                     </Switch>
 
                 );

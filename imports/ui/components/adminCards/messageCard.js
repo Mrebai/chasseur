@@ -20,9 +20,7 @@ class AdminMessageCard extends Component {
         this.setState({
             modal: !this.state.modal
         });
-
     }
-
     delete = () =>
         this.props.deleteMsgMut({variables:{
                 id: this.props.data._id
@@ -33,7 +31,7 @@ class AdminMessageCard extends Component {
                 <div onClick={this.toggle}  className="d-flex justify-content-between px-1 messageHead">
                     <div className=' ml-2'>      <p>{this.props.data.name}</p></div>
                     <div className=''>      <p>{this.props.data.subject}</p></div>
-                    <div className=' mr-2' >{ago(this.props.data.date) + "   "} <span  onClick={this.modal} className={'ml-1'}><i class="far fa-trash-alt"></i> </span> </div>
+                    <div className=' mr-2' >{ago(this.props.data.date) + "   "} <span  onClick={this.modal} className={'ml-1'}><i className="far fa-trash-alt"></i> </span> </div>
 
                 </div>
                 <Collapse isOpen={this.state.collapse}>

@@ -42,9 +42,12 @@ class App extends Component {
                 if (error) return `Error! ${error.message}`;
 
                 return (
-                    <ThemeContext.Provider value={{width:this.state.width,user:data.user._id,userName:data.user.userName,cartLength:(data.user._id)?data.user.cart.length : 0 }}>
+                    <ThemeContext.Provider value={{width:this.state.width,user:data.user}}>
                         <LanguageContext.Provider value={(this.state.language === 'fr')?{...this.state,...french}:{...english,...this.state}}>
-                        <Routes />
+                        <Routes user={data.user} />
+                            {
+                                console.log(data.user)
+                            }
                         </LanguageContext.Provider>
                     </ThemeContext.Provider>
                 );
