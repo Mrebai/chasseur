@@ -2,6 +2,9 @@ body{
     overflow-x: hidden;
 }
 
+.hideClass{
+    z-index: -1;
+}
 /***************************** $$Navbar ***********************/
 .navBarContainer{
     background-color: transparent;
@@ -422,7 +425,7 @@ body{
     position: relative;
     display: block;
     font-size: 5rem;
-    background-color: #ffe1eb  ;
+    background-color: #fffcfd  ;
 }
 
 .offersTitle{
@@ -483,9 +486,10 @@ body{
 
 .ReserveNowBtn{
     display: block;
-    margin: auto;
+    margin: 0 auto;
     border-radius: 0;
     margin-top: 1rem;
+    margin-bottom: 2rem;
     padding: 4px 10px;
     background-color: #ff4081;
     color: #FFFFFF;
@@ -495,9 +499,10 @@ body{
 
 .ReserveNowBtn:hover{
     display: block;
-    margin: auto;
+    margin: 0 auto;
     border-radius: 0;
     margin-top: 1rem;
+    margin-bottom: 2rem;
     padding: 4px 10px;
     background-color: #ff4081;
     color: #FFFFFF;
@@ -524,6 +529,7 @@ body{
     background-image: url("/bg/bg2.jpg");
     background-size: cover;
     background-attachment: fixed;
+
 }
 
 .whyUsBtn{
@@ -531,7 +537,7 @@ body{
     height: 100px;
     margin-bottom: 1rem;
     font-size: 3rem;
-    background-color: rgba(256,256,256,.1);
+    background-color: rgba(256,256,256,0);
     color:rgba(256,256,256,.3);
 
 
@@ -539,7 +545,7 @@ body{
 
 .whyUsBtn:focus{
     box-shadow: none;
-
+    background-color: rgba(256,256,256,0.05);
 
 }
 
@@ -550,8 +556,10 @@ body{
 }
 
 .whyUsMsg{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     color: #c4c4c4;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
 }
@@ -679,7 +687,7 @@ body{
 
 /***************************** $$Footer ***********************/
 .footerContainer{
-    background-image: url("/bg/bg4.jpg");
+    background-image: url("/bg/bg44.jpg");
     background-size: cover;
     padding-top: 3rem;
 }
@@ -749,7 +757,9 @@ body{
     background-color: rgba(256,256,256,.05);
 
 }
-
+.slickFooterCOnt{
+    height: 160px;
+}
 .footerImgContainer{
     display: block;
     min-width: 80px;
@@ -871,4 +881,36 @@ body{
 .msgBodyElem div:first-child{
     color: #A4A4A4;
     font-weight: bold;
+
+}
+
+.Cont404{
+    text-align: center;
+    position: absolute;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.Cont404 div{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.galleryBigCont{
+    padding-top: 90px;
+}
+
+.hideClass{
+    display: none;
+}
+
+.imgBackBtn{
+    font-size: 2rem;
+    color: rgba(254,69,101,.4);
+}
+
+.imgBackBtn:hover{
+    font-size: 2rem;
+    color: rgba(254,69,101,1);
 }

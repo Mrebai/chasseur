@@ -10,6 +10,8 @@ import AdminAddStream from './adminGallery/straming/adminAddStreaming'
 import AdminAddVideo from './adminGallery/videos/adminAddVideos'
 import GlleryIndex from './adminGallery'
 import SignUp from '../account/signUp'
+import Home from "../home";
+import PropTypes from 'prop-types';
 class AdminIndex extends Component {
     constructor(props) {
         super(props);
@@ -48,5 +50,22 @@ class AdminIndex extends Component {
         )
     }
 }
+AdminIndex.propTypes = {
+    data: PropTypes.shape({
+        getAlbums:PropTypes.array,
+        getVideos:PropTypes.array,
+        getStreaming:PropTypes.array,
 
+    }),
+    home: PropTypes.object
+};
+
+AdminIndex.defaultValue= {
+    data:{
+        getAlbums:[],
+        getVideos:[],
+        getStreaming:[],
+
+    }
+};
 export default AdminIndex

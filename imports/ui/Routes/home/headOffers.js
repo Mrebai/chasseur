@@ -1,8 +1,13 @@
 import React from 'react';
 
 export default HeadOffers = ({lng}) => {
+    const scrollInToElem= (id) =>{
+        const element = document.getElementById(id);
+        element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+
+    };
     return (
-        <div className="headOfferContainer">
+        <div className="headOfferContainer" id="offersId">
             <h3 className=" SectionTitle offersTitle">{lng.offers}</h3>
             <div className='titleUnderlined'></div>
 
@@ -35,8 +40,10 @@ export default HeadOffers = ({lng}) => {
                 </div>
 
             </div>
+            <div className="d-flex justify-content-center">
+                <button onClick={() => scrollInToElem('reserveId')} className="btn ReserveNowBtn mb-4"> {lng.reserveNow}</button>
 
-            <button className="btn ReserveNowBtn mb-4"> {lng.reserveNow}</button>
+            </div>
 
 
         </div>

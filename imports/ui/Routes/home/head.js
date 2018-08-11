@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Slider from 'react-slick'
-
+import {withRouter} from 'react-router-dom'
 
 
 class Head  extends Component {
@@ -60,10 +60,15 @@ class Head  extends Component {
         this.slider2.slickPrev();
     }
 
+    scrollInToElement= (id) =>{
+        const element = document.getElementById(id);
+        element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 
+    };
     render() {
         return (
             <div className="row headerContainer">
+                {console.log(this.props.history)}
                 <div className="col-md-6 row headerFirstHalf" >
                     <div className="offset-md-4 col-md-8 " >
                         <h1 className='lead display-4 headTitle'> {this.props.lng.title.toUpperCase()}</h1>
@@ -81,24 +86,24 @@ class Head  extends Component {
                                 <Slider asNavFor={this.state.nav2}   ref={a => (this.slider1 = a)} {...this.state.settings2}>
 
                                     <div key={1} className=" minImg"  >
-                                        <button className="btn coverBtn">{this.props.lng.reserveNow.toUpperCase()} </button>
+                                        <button className="btn coverBtn"  onClick={() => this.scrollInToElement("reserveId")} >{this.props.lng.reserveNow.toUpperCase()} </button>
 
                                         <img className='minHeadImg' src="/header/miniImg.jpg" alt=""/>
 
                                     </div>
 
                                     <div key={2} className=" minImg"  >
-                                        <button className="btn coverBtn">{this.props.lng.ourOffers.toUpperCase()} </button>
+                                        <button   className="btn coverBtn"  onClick={() => this.scrollInToElement("offersId")} >{this.props.lng.ourOffers.toUpperCase()} </button>
 
                                         <img className='minHeadImg' src="/header/miniImg2.jpg" alt=""/>
                                     </div>
                                     <div key={3} className=" minImg"  >
-                                        <button className="btn coverBtn"> <i style={{color:'red'}} className="far fa-dot-circle"></i>{this.props.lng.streaming.toUpperCase()} </button>
+                                        <button onClick={() => this.props.history.push('gallery/streaming')} className="btn coverBtn"> <i style={{color:'red'}} className="far fa-dot-circle"></i>{this.props.lng.streaming.toUpperCase()} </button>
 
                                         <img className='minHeadImg' src="/header/miniImg3.jpg" alt=""/>
                                     </div>
                                     <div key={4} className=" minImg"  >
-                                        <button className="btn coverBtn">{this.props.lng.gallery.toUpperCase()} </button>
+                                        <button className="btn coverBtn"  onClick={() => this.scrollInToElement("galleryId")} >{this.props.lng.gallery.toUpperCase()} </button>
 
                                         <img className='minHeadImg' src="/header/miniImg4.jpg" alt=""/>
                                     </div>
@@ -146,4 +151,4 @@ class Head  extends Component {
     }
 }
 
-export default Head
+export default withRouter(Head)

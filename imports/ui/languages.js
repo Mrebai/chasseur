@@ -45,7 +45,7 @@ export const english = {
     testimonials1Job:"Customer",
     testimonials2Job:"Customer",
     testimonials3Job:"Customer",
-    contactUs:'contact us',
+    reserveDate:'Book your date',
     name:'name',
     phoneNumber:'phone number',
     eMailAddress:'e-mail address',
@@ -54,8 +54,10 @@ export const english = {
     sendMsg:'send message',
     aboutUs:'about us',
     aboutUsText:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores eligendi explicabo illum nihil nostrum omnis perspiciatis repudiandae suscipit vitae.',
-    recentPosts:'recent posts',
+    recentPosts:'recent Albums',
     address:'address',
+    msgSentTitle:'Reservation registered.',
+    msgSentCont:'We will contact you via phone and email to confirm your reservation.',
 };
 
 
@@ -106,7 +108,7 @@ export const french = {
     testimonials1Job:"Client",
     testimonials2Job:"Client",
     testimonials3Job:"Client",
-    contactUs:'Contactez nous',
+    reserveDate:'Reservez votre date',
     name:'nom',
     phoneNumber:'numéro de téléphone',
     eMailAddress:'adresse e-mail',
@@ -115,7 +117,9 @@ export const french = {
     sendMsg:'Envoyer le message',
     aboutUs:'à propos de nous',
     aboutUsText:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores eligendi explicabo illum nihil nostrum omnis perspiciatis repudiandae suscipit vitae.',
-    recentPosts:'Messages récents',
+    recentPosts:'Albums récents',
     address:'Adresse',
+    msgSentTitle:'Réservation enregistrée.',
+    msgSentCont:'Nous vous contacterons par téléphone et par email pour confirmer votre réservation.',
 };
 

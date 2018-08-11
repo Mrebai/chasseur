@@ -6,9 +6,12 @@ import GalleryIndex from './gallery'
 import {galleryQuery} from '../api/queries'
 import Login from './account/signIn'
 import SignUp from './account/signUp'
+import NotFound from "./notFound404"
+import PropTypes from 'prop-types';
 import { Query } from "react-apollo";
 
-export default Routes = ({user,id}) => {
+
+const Routes = ({user,id}) => {
 
     const Dogs = ( ) => (
         <Query query={galleryQuery}>
@@ -25,7 +28,7 @@ export default Routes = ({user,id}) => {
                          } />
                         <Route  path={"/gallery"} render={(match) => <GalleryIndex match={match.match} data={data}/> } />
                         <Route  path={"/signin"} render={(match) => <Login match={match.match} data={data}/> } />
-
+                        <Route component={NotFound}/>
                     </Switch>
 
                 );
@@ -48,4 +51,23 @@ export default Routes = ({user,id}) => {
         </BrowserRouter>
 
     )
-}
+};
+
+Routes.propTypes = {
+    data: PropTypes.shape({
+        getAlbums:PropTypes.array,
+        getVideos:PropTypes.array,
+        getStreaming:PropTypes.array,
+
+    })
+};
+
+Route.defaultValue= {
+    data:{
+        getAlbums:[],
+        getVideos:[],
+        getStreaming:[],
+
+    }
+};
+export default Routes

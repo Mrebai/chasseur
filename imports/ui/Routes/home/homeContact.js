@@ -1,11 +1,14 @@
 import React, {Component} from 'react'
 import {graphql} from 'react-apollo'
 import {sendMsg} from '../../api/mutations'
-
+import {Button,Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 class HomeContact extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            modal: false
+        }
+        this.toggle = this.toggle.bind(this)
     }
     sendMessage = (e) =>{
         e.preventDefault();
@@ -20,16 +23,19 @@ class HomeContact extends Component {
                 offer:this.offer.value,
                 subject: this.subject.value,
                 message:this.message.value
-            }}).then(data => console.log(data)).catch(e =>
+            }}).then(data => this.toggle()
+        ).catch(e =>
         console.log(e))
 };
-    componentDidMount(){
-
+    toggle() {
+        this.setState({
+            modal: !this.state.modal
+        });
     }
     render() {
         return (
-            <div className="homeContactContainer">
-                <h3 className=" SectionTitle offersTitle">{this.props.lng.contactUs.toUpperCase()}</h3>
+            <div className="homeContactContainer" id='reserveId'>
+                <h3 className=" SectionTitle offersTitle">{this.props.lng.reserveDate.toUpperCase()}</h3>
                 <div className={'titleUnderlined mb-4'}></div>
                 <div className="container">
                     <form action="" onSubmit={this.sendMessage}>
@@ -57,6 +63,12 @@ class HomeContact extends Component {
                         <button className="btn ReserveNowBtn mb-4" type='submit'>{this.props.lng.sendMsg.toUpperCase()}</button>
                     </form>
                 </div>
+                <Modal isOpen={this.state.modal} toggle={this.toggle} >
+                    <ModalHeader toggle={this.toggle}>{this.props.lng.msgSentTitle}</ModalHeader>
+                    <ModalBody>
+                        {this.props.lng.msgSentCont}
+                    </ModalBody>
+                </Modal>
             </div>
         )
     }

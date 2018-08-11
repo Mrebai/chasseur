@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 import Slider from 'react-slick'
+import {Link} from 'react-router-dom'
 import HomeImgCard from '../../../components/cards/homeImgCard'
 import HomeVideoCard from '../../../components/cards/homeVideoCard'
+import PropTypes from 'prop-types';
 class HeadGallery extends Component {
     constructor(props) {
         super(props);
@@ -44,7 +46,7 @@ class HeadGallery extends Component {
         };
 
         return (
-            <div className="headGalleryContainer">
+            <div className="headGalleryContainer" id={"galleryId"}>
                 <h3 className=" SectionTitle">{this.props.lng.gallery.toUpperCase()}</h3>
                 <div className={'titleUnderlined'}></div>
 
@@ -93,7 +95,7 @@ class HeadGallery extends Component {
 
                                 </div>
                             </div>
-                            <button className="btn gallerySlideViewMoreBtn">{this.props.lng.viewMore.toUpperCase()}</button>
+                            <Link to={'/gallery/albums'} className="btn btn-link gallerySlideViewMoreBtn">{this.props.lng.viewMore.toUpperCase()}</Link>
 
                         </div>
                         <div>
@@ -115,7 +117,7 @@ class HeadGallery extends Component {
                                     <HomeVideoCard type={'video'} data={this.props.data.getVideos[3]}/>
                                 </div>
                             </div>
-                            <button className="btn gallerySlideViewMoreBtn">{this.props.lng.viewMore.toUpperCase()}</button>
+                            <Link  to={'/gallery/Videos'}  className="btn btn-link gallerySlideViewMoreBtn">{this.props.lng.viewMore.toUpperCase()}</Link>
 
 
                         </div>
@@ -130,7 +132,7 @@ class HeadGallery extends Component {
                                 </div>
 
                             </div>
-                            <button className="btn gallerySlideViewMoreBtn">{this.props.lng.viewMore.toUpperCase()}</button>
+                            <Link  to={'/gallery/Streaming'}  className="btn btn-link gallerySlideViewMoreBtn">{this.props.lng.viewMore.toUpperCase()}</Link>
 
 
                         </div>

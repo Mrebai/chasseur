@@ -12,11 +12,10 @@ export default Footer = ({lng,data}) => {
         speed:1000,
         vertical: true,
         verticalSwiping: true,
-
     };
 
     return (
-        <div className=" footerContainer">
+        <div className=" footerContainer" id='footerSelector'>
             <div className="container">
                 <div className="row">
                     <div className="col-md-4">
@@ -37,7 +36,7 @@ export default Footer = ({lng,data}) => {
 
 
                         <div className='footerUnderlined'></div>
-                        <Slider {...settings}>
+                        <Slider className='slickFooterCOnt'  {...settings }>
                             {
                                 data.slice(0,4).map(item =>
 

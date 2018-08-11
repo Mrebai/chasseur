@@ -1,5 +1,6 @@
 import React,{Component,Fragment} from 'react'
-
+import GalleryIndex from "../gallery";
+import PropTypes from 'prop-types';
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -48,5 +49,22 @@ class Login extends Component {
         )
     }
 }
+Login.propTypes = {
+    data: PropTypes.shape({
+        getAlbums:PropTypes.array,
+        getVideos:PropTypes.array,
+        getStreaming:PropTypes.array,
 
+    }),
+    home: PropTypes.object.isRequired
+};
+
+Login.defaultValue= {
+    data:{
+        getAlbums:[],
+        getVideos:[],
+        getStreaming:[],
+
+    }
+};
 export default Login

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-
+import {Link} from 'react-router-dom'
 class HomeImgCard extends Component {
     constructor(props) {
         super(props);
@@ -38,9 +38,9 @@ class HomeImgCard extends Component {
                             <h6 className="card-title">{this.props.data.title}</h6>
                             <p>{this.getDate() }</p>
                         </div>
-                        <button onClick={() => this.expandImage('fixed')} className={ (this.state.size === '')? "btn expandHeadImg ":(this.state.size === 'bigger')? 'btn expandHeadImg biggerExpand' :'btn expandHeadImg smallerExpand'}>
+                        <Link to={'/gallery/albums/' + this.props.data._id} onClick={() => this.expandImage('fixed')} className={ (this.state.size === '')? "btn expandHeadImg ":(this.state.size === 'bigger')? 'btn expandHeadImg biggerExpand' :'btn expandHeadImg smallerExpand'}>
                             <i className="fas fa-expand"></i>
-                        </button>
+                        </Link>
 
                     </div>
                 </div>
