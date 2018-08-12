@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {Button,Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import {graphql,compose} from 'react-apollo'
 import {deleteStreaming,toggleLive} from '../../api/mutations'
+import {withRouter} from 'react-router-dom'
 import Switch from "react-switch";
 
 class AdminStreamingCard extends Component {
@@ -10,10 +11,13 @@ class AdminStreamingCard extends Component {
         this.state = {
             size: '',
             modal: false,
-            checked: false
+            checked: this.props.data.live
         };
         this.toggle = this.toggle.bind(this);
         this.handleChange = this.handleChange.bind(this);
+    }
+    componentDidMount(){
+        this.setState({ checked: this.props.data.live})
     }
     handleChange(checked) {
         this.setState({ checked });
@@ -75,7 +79,7 @@ class AdminStreamingCard extends Component {
                                 />                            </div>
 
                             <div className="col-1">
-                                <button className="btn btn-link"><i className="fas fa-edit"></i></button>
+                                <button className="btn btn-link" onClick={() => this.props.history.push("/admin/editstream/" + this.props.data._id )}><i className="fas fa-edit"></i></button>
                             </div>
                             <div className="col-1">
                                 <button className="btn btn-link" onClick={this.toggle}><i className="fas fa-times"></i></button>
@@ -106,7 +110,7 @@ class AdminStreamingCard extends Component {
 export default compose(
     graphql (deleteStreaming,{name:'deleteStrMutation',options:{refetchQueries:['galleryQuery']}}),
     graphql (toggleLive,{name:'toggleStrMutation'})
-)(AdminStreamingCard)
+)(withRouter(AdminStreamingCard))
 
 
 

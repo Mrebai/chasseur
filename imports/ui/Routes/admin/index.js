@@ -32,8 +32,8 @@ class AdminIndex extends Component {
                         <Switch>
                             {
                                 (this.state.nav.length === 0 || this.state.nav === 'inbox')?<Route exact  path={this.props.match.path} component={showMessages}/>:( this.state.nav === 'signUp')?
-                                    <Route  path={this.props.match.path} render={(match) => <SignUp match={match.match}/> } />:
-                                    <Route  path={this.props.match.path} render={(route) => <GlleryIndex data={this.props.data} match={route.match} nav={this.state.nav}/> }/>
+                                    <Route exact  path={this.props.match.path} render={(match) => <SignUp match={match.match}/> } />:
+                                    <Route exact  path={this.props.match.path} render={(route) => <GlleryIndex data={this.props.data} match={route.match} nav={this.state.nav}/> }/>
                             }
 
                             <Route exact  path={this.props.match.path + '/editimage/:id'} render={(route) => <AdminEditAlbum data={this.props.data.getAlbums} match={route.match} nav={this.state.nav}/>}/>

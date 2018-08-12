@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {Button,Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import {graphql} from 'react-apollo'
 import {deleteVideo} from '../../api/mutations'
+import {withRouter} from 'react-router-dom'
 class AdminVideoCard extends Component {
     constructor(props) {
         super(props);
@@ -62,7 +63,7 @@ class AdminVideoCard extends Component {
                                 <p>{this.getDate() }</p>
                             </div>
                             <div className="col-2">
-                                <button className="btn btn-link"><i className="fas fa-edit"></i></button>
+                                <button className="btn btn-link" onClick={() => this.props.history.push("/admin/editvideo/" + this.props.data._id )} ><i className="fas fa-edit"></i></button>
                             </div>
                             <div className="col-2">
                                 <button className="btn btn-link" onClick={this.toggle}><i className="fas fa-times"></i></button>
@@ -90,7 +91,7 @@ class AdminVideoCard extends Component {
 }
 
 
-export default graphql(deleteVideo,{name:'deleteVidMutation',options:{refetchQueries:['galleryQuery']}})(AdminVideoCard)
+export default graphql(deleteVideo,{name:'deleteVidMutation',options:{refetchQueries:['galleryQuery']}})(withRouter(AdminVideoCard))
 
 
 

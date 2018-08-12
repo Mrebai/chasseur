@@ -887,6 +887,8 @@ body{
 .Cont404{
     text-align: center;
     position: absolute;
+    left: 0;
+    top: 0;
     display: table;
     width: 100%;
     height: 100%;

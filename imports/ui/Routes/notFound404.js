@@ -8,7 +8,6 @@ export default NotFound = () => {
                 lng => {
                     return (
                         <div>
-                            <MainNavBar color={'#5A5A5A'} lng={lng} />
                             <div className="Cont404">
                                 <div>
                                     <h6 className='lead display-1'>

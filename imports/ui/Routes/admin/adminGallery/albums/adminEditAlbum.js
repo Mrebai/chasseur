@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import AddAlbumImgs from './addAlbumImgs'
 import {graphql} from 'react-apollo'
 import {editAlbum} from '../../../../api/mutations'
-
+import {withRouter} from 'react-router-dom'
 
 class AdminEditAlbum extends Component {
     constructor(props) {
@@ -100,15 +100,9 @@ class AdminEditAlbum extends Component {
 
                         <p>Item Not Found</p>
                 }
-                {
-                    console.log( this.props.data)
-                }
-                {
-                    console.log(  this.props.match.params.id)
-                }
             </div>
         )
     }
 }
 
-export default graphql(editAlbum,{name:'editAlbumMutation'})(AdminEditAlbum);
+export default graphql(editAlbum,{name:'editAlbumMutation'})(withRouter(AdminEditAlbum));

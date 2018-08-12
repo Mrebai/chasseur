@@ -6,6 +6,7 @@ import GalStreaming from './galStreaming'
 import GalImg from './galimg'
 import PropTypes from 'prop-types';
 import MainNavBar from '../home/headNavBar'
+import NotFound from '../notFound404'
 import LanguageContext from '../../context/languageContext';
 class GalleryIndex extends Component {
     constructor(props) {
@@ -29,6 +30,7 @@ class GalleryIndex extends Component {
                                             <Route exact path={this.props.match.path + '/Albums/:id'} render={(match) =>  <GalImg match={match.match}  data={this.props.data.getAlbums}/>}  />
                                             <Route exact path={this.props.match.path + '/Streaming'} render={(match) =>  <GalStreaming match={match.match}  data={this.props.data.getStreaming}/>}  />
                                             <Route exact path={this.props.match.path + '/Videos'} render={(match) =>  <GalVideos match={match.match}  data={this.props.data.getVideos}/>}  />
+                                            <Route component={NotFound} />
                                         </Switch>
 
                                     </div>

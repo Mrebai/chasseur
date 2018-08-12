@@ -1,0 +1,72 @@
+{ 
+    "_id" : "jzEzZmWwiKexMPFMi", 
+    "createdAt" : ISODate("2018-08-09T02:24:16.400+0000"), 
+    "services" : {
+        "password" : {
+            "bcrypt" : "$2a$10$nHy.NZYhWIjvyaS6Zu2/9..ZhUntyue0y5B.JmSiN8Uu6AI/nbUay"
+        }, 
+        "resume" : {
+            "loginTokens" : [
+                {
+                    "when" : ISODate("2018-08-09T04:12:07.000+0000"), 
+                    "hashedToken" : "5PXgkhv4EHb7QVCHbjMj+Qu8mjzvevhAbbGi1zNBXpI="
+                }, 
+                {
+                    "when" : ISODate("2018-08-09T04:12:33.323+0000"), 
+                    "hashedToken" : "LmyPpTSrEfHFdR1G8x1uASAyjsdi1juyJxFuwZphM3k="
+                }, 
+                {
+                    "when" : ISODate("2018-08-09T04:13:00.519+0000"), 
+                    "hashedToken" : "9e6aDpYH09XF2/N8RhanacvUKgjNQGwDJYY/m616J/8="
+                }, 
+                {
+                    "when" : ISODate("2018-08-09T04:15:12.191+0000"), 
+                    "hashedToken" : "SuiKj4QGDHkYRDYUr3wStIl18O26WeIyyYO+4BYNPjQ="
+                }, 
+                {
+                    "when" : ISODate("2018-08-09T04:15:32.065+0000"), 
+                    "hashedToken" : "4O0eErw/lOht9q1cxAkmZXK+pKcctru7B7qxFMg78yM="
+                }, 
+                {
+                    "when" : ISODate("2018-08-09T04:16:06.434+0000"), 
+                    "hashedToken" : "GXQNsZV+TVkp7CccaR5CpVj62dC4VnV5IY1llDe3q2Y="
+                }, 
+                {
+                    "when" : ISODate("2018-08-12T04:27:43.141+0000"), 
+                    "hashedToken" : "bxS5ERfVwyYfYHuVM3/M/g/3yJDd0B9CCtdlT+fA0M4="
+                }, 
+                {
+                    "when" : ISODate("2018-08-12T04:28:00.419+0000"), 
+                    "hashedToken" : "n1KA8mCkpenUmMDRgNcI52tVHiF6QGmw0Wyzt0AcXfc="
+                }, 
+                {
+                    "when" : ISODate("2018-08-12T04:38:54.733+0000"), 
+                    "hashedToken" : "1deAquXP8GPqI7IVVfvVlGddL39nI/aKz6/MOrF21zE="
+                }, 
+                {
+                    "when" : ISODate("2018-08-12T04:39:07.861+0000"), 
+                    "hashedToken" : "ryg+MqBDLGbNOU5m5HsH9RAY+bVof9QXkGbzCJAtjGs="
+                }, 
+                {
+                    "when" : ISODate("2018-08-12T04:54:01.049+0000"), 
+                    "hashedToken" : "dqSfJN7XcNQKZamKPC87fSUigo5dwgWJFwcZMCdWgio="
+                }, 
+                {
+                    "when" : ISODate("2018-08-12T04:55:11.355+0000"), 
+                    "hashedToken" : "Hfh5XlesBE2r2PPCbGEFwlNriD6B6cj5SK7RB2uiNe4="
+                }, 
+                {
+                    "when" : ISODate("2018-08-12T04:57:15.830+0000"), 
+                    "hashedToken" : "KxW64DxJXle9q7/1zutV5iYU03QDdi/F/uY+cmlk9rs="
+                }
+            ]
+        }
+    }, 
+    "username" : "aaaaa1233", 
+    "emails" : [
+        {
+            "address" : "me1@gmail.com", 
+            "verified" : false
+        }
+    ]
+}

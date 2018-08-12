@@ -1,6 +1,8 @@
 import React,{Component,Fragment} from 'react'
 import GalleryIndex from "../gallery";
 import PropTypes from 'prop-types';
+import {withRouter} from 'react-router-dom'
+import {withApollo} from 'react-apollo'
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -8,6 +10,7 @@ class Login extends Component {
     }
 
     submittedForm2 = (e) => {
+        e.preventDefault();
         if(this.userName.value.length < 1 ){
             return( this.setState({message:"please enter you user name"}))
         }
@@ -16,18 +19,20 @@ class Login extends Component {
             return( this.setState({message:"you must enter your password"}));
         }
         Meteor.loginWithPassword(this.userName.value,this.password.value,error => {
-            if(error){
-                return(error.reason);
-            }
-            this.setState({message:""});
-            this.props.client.resetStore();
+            if(!error){
+                this.setState({message:""});
+                this.props.client.resetStore();
+                this.props.history.push('/admin')
+
+            }else  return(error.reason);
+
         });
     };
     render() {
         return (
             <div className='row'>
                 <div className="offset-md-3 col-md-6">
-                    <form className='loginFormContainer my-auto'>
+                    <form onSubmit={this.submittedForm2} className='loginFormContainer my-auto'>
                         <h6 className=" lead " id='signIn'> SIGN IN</h6>
                         <div className="form-group loginForm">
                             <label htmlFor="emailSignUp">User Name</label>
@@ -39,7 +44,7 @@ class Login extends Component {
                             <input ref={(input) => {this.password = input}} type="password" className="form-control defaultInput" id="SingInPassword" placeholder="Enter a strong password " aria-describedby="PasswordHelp"/>
                             <small id="PasswordHelp" className="form-text text-muted"><a href="#"> Forgot Password?</a></small>
                         </div>
-                        <button onClick={() => this.submittedForm2()}  type="submit"  className="btn btn-lg btn-link adminNavItem btn-block">Login</button>
+                        <button type="submit"  className="btn btn-lg btn-link adminNavItem btn-block">Login</button>
                         <small id="noAccount" className="form-text text-muted"><a href="#">I don't have an account</a></small>
 
                     </form>
@@ -56,7 +61,7 @@ Login.propTypes = {
         getStreaming:PropTypes.array,
 
     }),
-    home: PropTypes.object.isRequired
+    home: PropTypes.object
 };
 
 Login.defaultValue= {
@@ -67,4 +72,4 @@ Login.defaultValue= {
 
     }
 };
-export default Login
+export default withRouter(withApollo(Login))
