@@ -17,15 +17,17 @@ import videosResolvers from '../../api/videos/resolvers';
 import streamingSchema from '../../api/streaming/streaming.graphql';
 import streamingResolvers from '../../api/streaming/resolvers';
 
-//hihihiiivvsqfcfsssdssssfffhhdssszssssssssssssssss
-// hiiiicdxcsdcscvcxndsssssjyssxssgsgfssfsssssssssssssdsssssssss sfsssssdsssdssssssssssdsssssssss
+import postsSchema from '../../api/posts/posts.graphql';
+import postsResolvers from '../../api/posts/resolvers';
+//hihihiiivvsqfcfsssdssssfffhssssjhdssszssssssssssssssss
+// hiiiicdxcsdcscvcxndsssssssssssjhgkngjyssxssgsgfssfsssssssssssssssdssssssssss sfsssssdsssdssssssssssdsssssssss
 
 
-const typeDefs = [UserSchema,messageSchema,albumSchema,videosSchema,streamingSchema];
+const typeDefs = [UserSchema,messageSchema,albumSchema,videosSchema,streamingSchema,postsSchema];
 
 
 
-const resolvers = merge(UserResolvers,messageResolvers,albumResolvers,videosResolvers,streamingResolvers);
+const resolvers = merge(UserResolvers,messageResolvers,albumResolvers,videosResolvers,streamingResolvers,postsResolvers);
 
 Meteor.users.allow({
     insert: function (userId, doc) {

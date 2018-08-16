@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import {BrowserRouter,Route,Switch,Link,Redirect} from "react-router-dom"
 import Home from './home'
 import AdminRoute from './admin'
@@ -9,11 +9,19 @@ import SignUp from './account/signUp'
 import NotFound from "./notFound404"
 import PropTypes from 'prop-types';
 import { Query } from "react-apollo";
+import {PostList} from "../admin/post/Posts"
+import buildGraphQLProvider  from 'ra-data-graphql-simple';
+import { Admin, Resource, Delete } from 'react-admin';
 
-
-const Routes = ({user,id}) => {
-
-    const Dogs = ( ) => (
+class Routes extends Component{
+    constructor() {
+        super();
+        this.state = { dataProvider: null };
+    }
+    componentDidMount() {
+        buildGraphQLProvider({ client:this.props.client }).then(dataProvider => this.setState({ dataProvider }));
+    }
+     Dogs = ( ) => (
         <Query query={galleryQuery}>
             {({ loading, error, data }) => {
                 if (loading) return "Loading...";
@@ -23,9 +31,7 @@ const Routes = ({user,id}) => {
 
                     <Switch>
                         <Route exact path={"/"} render={(match) =>  <Home match={match.match}  data={data}/>}  />
-                        <Route  path={"/admin"} render={(match) =>
-                            (user._id)?    <AdminRoute match={match.match} data={data}/> : <Redirect to='/' />
-                         } />
+
                         <Route  path={"/gallery"} render={(match) => <GalleryIndex match={match.match} data={data}/> } />
                         <Route  path={"/signin"} render={(match) => <Login match={match.match} data={data}/> } />
                         <Route component={NotFound}/>
@@ -37,20 +43,24 @@ const Routes = ({user,id}) => {
     );
 
 
-
-    return(
-
-        <BrowserRouter>
-            <div>
-
-
-                {Dogs()}
-            </div>
+    render(){
+        if (!this.state.dataProvider) {
+            return <div>Loading</div>;
+        }
+        return(
 
 
-        </BrowserRouter>
+                <div>
 
-    )
+
+                    {this.Dogs()}
+                </div>
+
+
+
+        )
+    }
+
 };
 
 Routes.propTypes = {

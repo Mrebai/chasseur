@@ -44,7 +44,7 @@ class App extends Component {
                 return (
                     <ThemeContext.Provider value={{width:this.state.width,user:data.user}}>
                         <LanguageContext.Provider value={(this.state.language === 'fr')?{...this.state,...french}:{...english,...this.state}}>
-                        <Routes user={data.user} />
+                        <Routes client={this.props.client} user={data.user} />
                         </LanguageContext.Provider>
                     </ThemeContext.Provider>
                 );
