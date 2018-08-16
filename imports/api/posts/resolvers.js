@@ -6,16 +6,13 @@ export default {
 
     Query:{
         allPosts(obj,args,ctx){
-            console.log(args);
             return posts.find({},{skip:args.perPage * args.page, limit:args.perPage }).fetch();
         },
-
-
         _allPostsMeta(obj,args,ctx){
-
-
-
             return {count :  Math.ceil(posts.find().count()/args.perPage) };
+        },
+        Post(obj,{id},ctx){
+            return posts.findOne({_id:id});
         }
     },
 
@@ -25,9 +22,24 @@ export default {
         }
     },
     Mutation:{
-        createPost(obj,{title},ctx){
-            const id = posts.insert({title});
+        createPost(obj,args,ctx){
+            console.log(args)
+            const id = posts.insert({title:args.title,writer_id:args.writer_id});
             return posts.findOne(id);
+        },
+        updatePost(obj,{id,title,writer_id},ctx){
+            posts.update({_id:id,writer_id},{
+                $set:{
+                    title
+                }
+            });
+            return posts.findOne({_id:id})
+        },
+        deletePost(obj,{id},args){
+
+             res = posts.remove({_id:id});
+
+            return (((res)) !== 0)? {data:id}:{data:"failed "}
         }
     }
 

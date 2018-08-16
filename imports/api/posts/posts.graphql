@@ -4,17 +4,16 @@ extend type Query {
     _allPostsMeta(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: String): ListMetadata
 }
 extend type Mutation {
-    createPost(title: String): Post
-    updatePost(title: String): Post
-    removePost(id: ID!): Boolean
+    createPost(title: String,writer_id:ID): Post
+    updatePost(id: ID,title: String,writer_id:ID): Post
+    deletePost(id: ID!): Post
 }
 type Post {
     id: ID
+    writer_id:String
     title: String
-    views: Int
-    user_id: ID
-    User: User
-    Comments: [String]
+
+
 }
 type PostFilter {
     q: String
@@ -25,7 +24,7 @@ type PostFilter {
     views_lte: Int
     views_gt: Int
     views_gte: Int
-    user_id: ID
+    writer_id: ID
 }
 type ListMetadata {
     count: Int

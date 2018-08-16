@@ -6,6 +6,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.42",
+    "admin-on-rest": "^1.4.1",
+    "aor-simple-graphql-client": "0.0.11",
     "apollo-boost": "^0.1.4",
     "apollo-cache-inmemory": "^1.1.11",
     "apollo-client": "^2.2.7",
