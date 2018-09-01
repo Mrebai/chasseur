@@ -2,7 +2,7 @@
 import React from "react";
 import { Meteor } from "meteor/meteor";
 import { render } from "react-dom";
-import { ApolloClient } from "apollo-client";
+
 import {HttpLink} from 'apollo-link-http';
 import { ApolloLink, from } from "apollo-boost";
 import {InMemoryCache} from "apollo-cache-inmemory";
@@ -12,32 +12,23 @@ import {BrowserRouter,Route,Switch,Link,Redirect} from "react-router-dom"
 import AdminIndex from '../../ui/admin'
 import NotFound from "../../ui/Routes/notFound404";
 
+import ApolloClient from 'apollo-boost'
+
+
+// http link
 
 import {PostList} from "../../ui/admin/post/Posts"
 import buildGraphQLProvider  from 'ra-data-graphql-simple';
 import { Admin} from 'react-admin';
 
-// http link
-const httpLink = new HttpLink({ uri : Meteor.absoluteUrl('graphql')});
-
-// Auth Link
-const authLink = new ApolloLink((operation,forward) => {
-    const token = Accounts._storedLoginToken();
-    operation.setContext(() => ({
-        headers:{
-            "meteor-login-token":token
-        }
-    }));
-    return forward(operation);
-});
-
-//dcf
-
-const cache = new InMemoryCache();
-
 const client = new ApolloClient({
-  link: from([authLink,httpLink]) ,
-  cache
+    uri: Meteor.absoluteUrl('graphql'),
+    request: operation =>
+        operation.setContext(() => ({
+            headers: {
+                authorization: Accounts._storedLoginToken()
+            }
+        }))
 });
 
 
@@ -57,6 +48,8 @@ Meteor.startup(() => {
 
 
                         }/>
+
+
 
 
                     <Route render={(match) =>

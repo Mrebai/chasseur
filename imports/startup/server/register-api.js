@@ -1,5 +1,7 @@
-import { createApolloServer } from "meteor/apollo";
-import { makeExecutableSchema } from "graphql-tools";
+import { ApolloServer, gql } from 'apollo-server-express'
+import { WebApp } from 'meteor/webapp'
+import { getUser } from 'meteor/apollo'
+
 import merge from 'lodash/merge'
 
 import UserSchema from '../../api/users/User.graphql';
@@ -41,9 +43,22 @@ Meteor.users.allow({
         return true;
     }
 });
-const schema = makeExecutableSchema({
-  typeDefs,
-  resolvers
-});
 
-createApolloServer({ schema });
+const server = new ApolloServer({
+    typeDefs,
+    resolvers,
+    context: async ({ req }) => ({
+        user: await getUser(req.headers.authorization)
+    })
+})
+
+server.applyMiddleware({
+    app: WebApp.connectHandlers,
+    path: '/graphql'
+})
+
+WebApp.connectHandlers.use('/graphql', (req, res) => {
+    if (req.method === 'GET') {
+        res.end()
+    }
+})
